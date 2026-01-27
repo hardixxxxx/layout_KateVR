@@ -1,0 +1,35 @@
+.help {
+  height: 100vh;
+  padding-inline: 20px;
+  background-color: $bg-aside;
+
+  &__top-bar {
+    justify-content: end;
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__title {
+    @include h2-mobile;
+    text-align: center;
+
+    &--highlighted {
+      font-weight: 400;
+      color: $color-blue;
+    }
+  }
+
+  &__desc {
+    @include text-mobile;
+  }
+
+  &__link {
+    color: $color-blue;
+    text-decoration: none;
+  }
+}

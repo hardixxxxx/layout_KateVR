@@ -1,0 +1,19 @@
+.language {
+  height: 100vh;
+  background-color: $bg-aside;
+
+  &__top-bar {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    @include text-aside-mobile;
+
+    padding: 11px 0 11px 22px;
+  }
+}

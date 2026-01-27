@@ -1,0 +1,9 @@
+.menu {
+  height: 100vh;
+  background-color: $bg-aside;
+
+  &__top-bar{
+    justify-content: end;
+    margin-bottom: 24px;
+  }
+}
