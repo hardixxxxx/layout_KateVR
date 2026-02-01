@@ -1,0 +1,18 @@
+.buy {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  min-height: 100vh;
+
+  background: $bg-gradient;
+
+  &__place-order {
+    position: absolute;
+    top: 210px;
+    right: 0;
+    left: 0;
+  }
+}

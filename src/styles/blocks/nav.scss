@@ -1,10 +1,10 @@
 .nav {
   &__link {
     @include text-aside-mobile;
+
     display: block;
     padding-left: 22px;
     padding-block: 11px;
-
   }
 }
 

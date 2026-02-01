@@ -1,22 +1,22 @@
 .video-button {
+  cursor: pointer;
   display: flex;
   border: none;
   background: none;
-  cursor: pointer;
 
   &__text {
+    pointer-events: none;
+
     position: absolute;
     top: 50%;
     left: 60%;
-
-    pointer-events: none;
+    transform: translate(-50%, -50%);
 
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
-    color: $color-white;
     line-height: 130%;
+    color: $color-white;
 
-    transform: translate(-50%, -50%);
   }
 }

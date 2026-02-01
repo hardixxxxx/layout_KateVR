@@ -1,0 +1,29 @@
+.complete {
+  height: 100vh;
+  padding-inline: 20px;
+  background-color: $bg-gradient;
+
+  &__title {
+    @include h1-mobile;
+
+    margin-bottom: 16px;
+    text-align: center;
+
+    &--highlighted {
+      font-weight: 400;
+      color: $color-blue;
+    }
+  }
+
+  &__desc {
+    @include text-mobile;
+
+    margin-bottom: 40px;
+    color: $color-white;
+    text-align: center;
+  }
+
+  &__button {
+    @include button;
+  }
+}

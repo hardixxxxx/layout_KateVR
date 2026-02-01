@@ -6,12 +6,13 @@
   }
 
   &__content {
-    padding-inline: 20px
+    padding-inline: 20px;
   }
 
   &__title {
-    margin-bottom: 17px;
     @include h1-mobile;
+
+    margin-bottom: 17px;
 
     &--secondary {
       font-weight: 400;
@@ -21,14 +22,15 @@
 
   &__desc {
     @include text-mobile;
+
     padding-bottom: 8px;
     font-weight: 500;
   }
 
-  &__price-wrapper{
+  &__price-wrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 
   &__price {
@@ -36,8 +38,8 @@
 
     font-size: 18px;
     font-weight: 500;
-    color: $color-white;
     line-height: 100%;
+    color: $color-white;
   }
 
   &__video-button {

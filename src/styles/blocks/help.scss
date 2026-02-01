@@ -16,6 +16,7 @@
 
   &__title {
     @include h2-mobile;
+
     text-align: center;
 
     &--highlighted {
@@ -30,6 +31,25 @@
 
   &__link {
     color: $color-blue;
+    text-decoration: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__contacts-link {
+    @include text-mobile;
+
+    line-height: 100%;
     text-decoration: none;
   }
 }

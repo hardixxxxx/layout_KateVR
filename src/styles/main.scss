@@ -1,16 +1,23 @@
-@import './utils/vars.scss';
-@import './utils/mixins.scss';
-@import './utils/typography.scss';
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/typography';
 
 @import './blocks/page';
-@import './blocks/header.scss';
-@import './blocks/top-bar.scss';
-@import './blocks/icon.scss';
-@import './blocks/product.scss';
-@import './blocks/video-button.scss';
-@import './blocks/buy-button.scss';
-@import './blocks/menu.scss';
-@import './blocks/nav.scss';
-@import './blocks/language.scss';
-@import './blocks/help.scss';
-
+@import './blocks/header';
+@import './blocks/top-bar';
+@import './blocks/icon';
+@import './blocks/product';
+@import './blocks/video-button';
+@import './blocks/buy-button';
+@import './blocks/menu';
+@import './blocks/nav';
+@import './blocks/language';
+@import './blocks/help';
+@import './blocks/faq';
+@import './blocks/buy';
+@import './blocks/checkout-steps';
+@import './blocks/order-summary';
+@import './blocks/dropdown';
+@import './blocks/place-order';
+@import './blocks/form';
+@import './blocks/complete';

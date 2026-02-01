@@ -1,0 +1,32 @@
+.checkout-steps {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: $steps-underline-offset;
+  padding-inline: 20px;
+  border-bottom: 1px solid #2f2f2f;
+
+  &__step {
+    @include text-aside-mobile;
+
+    position: relative;
+    font-size: 12px;
+    color: $color-info;
+
+    &--active {
+      color: $color-blue;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        bottom: -$steps-underline-offset;
+
+        display: block;
+
+        width: 100%;
+        border-bottom: 1px solid $color-blue;
+      }
+    }
+  }
+}
