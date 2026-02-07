@@ -1,0 +1,112 @@
+.tech {
+  padding-block: 50px;
+  padding-inline: 20px;
+  background-color: $bg-black;
+
+  &__title {
+    @include h2-mobile;
+
+    margin-bottom: 30px;
+
+    &--highlighted {
+      font-weight: 400;
+      color: $color-blue;
+    }
+  }
+
+  &__container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-inline: auto;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__button {
+    position: absolute;
+
+    display: block;
+
+    width: 34px;
+    height: 34px;
+    border: none;
+
+    background: none;
+    background-image: url(../images/tech-specs/icons/button-icon.svg);
+    background-repeat: no-repeat;
+
+    @include hover(transform, scale(1.1) rotate(90deg));
+
+    &--sensor {
+      top: -5%;
+      left: 30%;
+    }
+
+    &--battery {
+      top: 40%;
+      left: 70%;
+    }
+
+    &--connection {
+      bottom: 5%;
+      left: -10%;
+    }
+
+    &--active {
+      background-image: url(../images/tech-specs/icons/button-icon-close.svg);
+
+      @include hover(transform, scale(1.1) rotate(0));
+    }
+  }
+
+  &__specs {
+    position: absolute;
+    transform: scale(0);
+
+    width: max-content;
+    padding: 16px 10px;
+    border-radius: 4px;
+
+    background-color: $bg-tech;
+
+    transition: transform $animation-duration;
+
+    &--active {
+      transform: scale(1);
+    }
+
+    &--sensor {
+      top: 14%;
+      left: 0;
+      transform-origin: center top;
+    }
+
+    &--battery {
+      top: 59%;
+      left: -20%;
+      transform-origin: 73% top;
+    }
+
+    &--connection {
+      top: 92%;
+      left: 7%;
+      transform-origin: left top;
+    }
+  }
+
+  &__specs-title {
+    display: none;
+
+    @include h3-mobile;
+  }
+
+  &__specs-desc {
+    @include text-mobile;
+
+    font-size: 12px;
+  }
+}

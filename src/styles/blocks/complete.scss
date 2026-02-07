@@ -1,7 +1,5 @@
 .complete {
-  height: 100vh;
   padding-inline: 20px;
-  background-color: $bg-gradient;
 
   &__title {
     @include h1-mobile;

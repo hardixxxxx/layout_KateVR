@@ -1,0 +1,36 @@
+.about {
+  padding-block: 50px;
+  padding-inline: 20px;
+  background: $bg-gradient;
+
+  &__title {
+    @include h2-mobile;
+
+    margin-bottom: 20px;
+
+    &--highlighted {
+      font-weight: 400;
+      color: $color-blue;
+    }
+  }
+
+  &__desc {
+    @include text-mobile;
+
+    margin-top: 20px;
+  }
+
+  &__video-button {
+    position: relative;
+    margin-block: 24px 80px;
+    margin-inline: auto;
+  }
+
+  &__pre-meet {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    color: $color-blue;
+  }
+}

@@ -16,6 +16,15 @@
   text-transform: uppercase;
 }
 
+@mixin h3-mobile {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 100%;
+  color: $color-white;
+  text-transform: uppercase;
+}
+
 @mixin text-mobile {
   font-family: inherit;
   font-size: 16px;

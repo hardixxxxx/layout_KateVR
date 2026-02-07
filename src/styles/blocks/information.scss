@@ -1,0 +1,44 @@
+.information {
+  padding-block: 50px;
+  padding-inline: 20px;
+  background-color: $bg-black;
+
+  &__title-wrapper {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include h2-mobile;
+
+    margin-bottom: 12px;
+
+    &--highlighted {
+      font-weight: 400;
+      color: $color-blue;
+    }
+  }
+
+  &__intro {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 100%;
+    color: $color-blue;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__subsection-title{
+    @include h3-mobile;
+
+    margin-bottom: 10px;
+  }
+
+  &__subsection-desc{
+    @include text-mobile;
+  }
+}

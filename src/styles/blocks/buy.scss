@@ -1,6 +1,4 @@
 .buy {
-  position: relative;
-
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -9,10 +7,66 @@
 
   background: $bg-gradient;
 
+  &__wrapper {
+    position: relative;
+  }
+
   &__place-order {
     position: absolute;
-    top: 210px;
+    top: 0;
     right: 0;
     left: 0;
+
+    transition: transform $animation-duration;
+  }
+
+  &__pay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translateX(100%);
+
+    transition: transform $animation-duration;
+  }
+
+  &__complete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translateX(100%);
+
+    margin-top: 60px;
+
+    transition: transform $animation-duration;
+  }
+
+  &--pay {
+    .buy__place-order {
+      transform: translateX(-100%);
+    }
+
+    .buy__pay {
+      transform: translateX(0);
+    }
+  }
+
+  &--complete {
+    .buy__place-order {
+      transform: translateX(-100%);
+    }
+
+    .buy__pay {
+      transform: translateX(-100%);
+    }
+
+    .buy__complete {
+      transform: translateX(0);
+    }
+
+    .buy__order-summary {
+      display: none;
+    }
   }
 }

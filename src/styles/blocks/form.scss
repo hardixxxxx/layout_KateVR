@@ -43,6 +43,21 @@
     }
   }
 
+  &__textarea {
+    @include text-mobile;
+
+    resize: none;
+
+    width: 100%;
+    padding-bottom: 36px;
+    border: none;
+
+    color: $color-white;
+
+    background: none;
+    outline: none;
+  }
+
   &__label {
     @include text-mobile;
 

@@ -1,0 +1,31 @@
+.contact-us {
+  padding-block: 50px;
+  padding-inline: 20px;
+  background-color: $bg-black;
+
+  &__title-intro {
+    @include text-mobile;
+
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 100%;
+    color: $color-blue;
+  }
+
+  &__title {
+    @include h2-mobile;
+
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    margin-bottom: 30px;
+    padding-inline: 0;
+  }
+
+  &__text {
+    @include text-mobile;
+
+    font-size: 12px;
+  }
+}

@@ -1,7 +1,11 @@
 .video-button {
   cursor: pointer;
+
   display: flex;
+
+  width: min-content;
   border: none;
+
   background: none;
 
   &__text {

@@ -1,3 +1,17 @@
+@mixin on-tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin padding-inline {
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-inline: 34px;
+  }
+}
+
 @mixin hover($_property, $_toValue) {
   transition: #{$_property} $animation-duration;
   &:hover {

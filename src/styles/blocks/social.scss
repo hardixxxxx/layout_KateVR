@@ -1,0 +1,20 @@
+.social {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    color: $color-white;
+
+    @include hover(color, $color-blue);
+    @include hover(transform, scale(1.1));
+  }
+
+  &__icon {
+    color: inherit;
+  }
+}

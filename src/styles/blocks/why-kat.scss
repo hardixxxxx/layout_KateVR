@@ -1,0 +1,32 @@
+.why-kat {
+  padding-block: 50px;
+  padding-inline: 20px;
+  background: $bg-gradient;
+
+  &__title {
+    @include h2-mobile;
+
+    margin-bottom: 30px;
+
+    &--highlighted {
+      font-weight: 400;
+      color: $color-blue;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__section-title {
+    @include h3-mobile;
+
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    @include text-mobile;
+  }
+}

@@ -1,0 +1,15 @@
+.contacts {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__link {
+    @include text-mobile;
+
+    font-size: 13px;
+    line-height: 100%;
+    text-decoration: none;
+  }
+}
