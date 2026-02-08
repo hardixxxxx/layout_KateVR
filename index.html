@@ -54,16 +54,23 @@
 
         <a
           href="#menu"
-          class="icon"
+          class="icon icon--menu"
         ></a>
       </div>
 
       <article class="product">
-        <img
-          class="product__img"
-          src="./src/images/product-img-x2.png"
-          alt="Product image"
-        />
+        <picture class="product__img-wrapper">
+          <source
+            media="(min-width: 768px)"
+            srcset="./src/images/product-img-tablet.png"
+          />
+
+          <img
+            class="product__img"
+            src="./src/images/product-img-x2.png"
+            alt="Product image"
+          />
+        </picture>
 
         <div class="product__content">
           <h1 class="product__title">
@@ -86,14 +93,7 @@
             aria-label="Open video"
             href="https://www.youtube.com/watch?v=SvTbB19bvIw"
             target="_blank"
-          >
-            <img
-              class="video-button__icon"
-              src="./src/images/icons/icon-play-video.svg"
-              alt="Icon play video"
-            />
-            <span class="video-button__text">Play Video</span>
-          </a>
+          ></a>
         </div>
 
         <div class="product__buy-wrapper">
@@ -373,6 +373,13 @@
           </li>
         </ul>
       </div>
+
+      <button
+        disabled
+        class="faq__more-button"
+      >
+        More
+      </button>
     </aside>
     <aside
       class="buy page__buy"
@@ -994,14 +1001,7 @@
             aria-label="Open video"
             href="https://www.youtube.com/watch?v=SvTbB19bvIw"
             target="_blank"
-          >
-            <img
-              class="video-button__icon"
-              src="./src/images/icons/icon-play-video.svg"
-              alt="Icon play video"
-            />
-            <span class="video-button__text">Play Video</span>
-          </a>
+          ></a>
         </div>
 
         <div class="about__bottom">
@@ -1154,7 +1154,10 @@
 
         <form
           class="form contact-us__form"
-          onsubmit="this.reset(); return false;"
+          onsubmit="
+            this.reset();
+            return false;
+          "
           novalidate
         >
           <div class="form__field">

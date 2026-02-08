@@ -8,7 +8,7 @@
   }
 
   &__content {
-    padding-inline: 20px;
+    @include padding-inline;
   }
 
   &__title {
@@ -46,6 +46,12 @@
     text-align: left;
 
     background: none;
+
+    @include on-tablet {
+      padding-inline: 30px;
+    }
+
+    @include hover(color, $color-white);
   }
 
   &__answer {
@@ -53,6 +59,10 @@
     flex-direction: column;
     gap: 10px;
     padding: 0 12px 20px;
+
+    @include on-tablet {
+      padding-inline: 30px;
+    }
   }
 
   &__item--active &__answer {
@@ -68,5 +78,37 @@
 
     font-size: 12px;
     color: $color-info;
+  }
+
+  &__more-button {
+    display: block;
+
+    margin-top: 50px;
+    margin-inline: auto;
+    padding-bottom: 10px;
+    border: none;
+
+    color: $color-blue;
+
+    background: none;
+    background-image: url(../images/icons/dropdown-icon.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    transition:
+      background-image $animation-duration,
+      color $animation-duration;
+
+    @include text-mobile;
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    &:hover:not(&:disabled) {
+      color: $color-white;
+      background-image: url(../images/icons/dropdown-icon-hover.svg);
+    }
   }
 }

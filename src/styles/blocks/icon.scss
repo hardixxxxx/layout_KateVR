@@ -4,10 +4,20 @@
   width: 20px;
   height: 20px;
 
-  background-image: url(../images/icons/icon-menu.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+
+  @include hover(transform, scale(1.1));
+
+  &--menu {
+    background-image: url(../images/icons/icon-menu.svg);
+
+    @include on-tablet {
+      width: 30px;
+      height: 30px;
+    }
+  }
 
   &--close {
     background-image: url(../images/icons/icon-close.svg);

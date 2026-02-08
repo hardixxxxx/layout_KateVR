@@ -3,24 +3,14 @@
 
   display: flex;
 
-  width: min-content;
+  width: 248px;
+  height: 69px;
   border: none;
 
-  background: none;
+  background-image: url(../images/icons/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 
-  &__text {
-    pointer-events: none;
-
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 130%;
-    color: $color-white;
-
-  }
+  @include hover(background-image, url(../images/icons/icon-play-hover.svg))
 }

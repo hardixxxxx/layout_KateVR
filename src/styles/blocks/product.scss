@@ -1,12 +1,27 @@
 .product {
+  @include on-tablet {
+    @include section-grid;
+  }
+
+  &__img-wrapper {
+    grid-column: 3/-1;
+    grid-row: 1;
+  }
+
   &__img {
+    pointer-events: none;
     display: block;
     width: 100%;
     object-fit: cover;
   }
 
   &__content {
-    padding-inline: 20px;
+    @include padding-inline;
+
+    @include on-tablet {
+      grid-column: 1/4;
+      grid-row: 1;
+    }
   }
 
   &__title {
@@ -23,32 +38,49 @@
   &__desc {
     @include text-mobile;
 
-    padding-bottom: 8px;
+    margin-bottom: 8px;
     font-weight: 500;
+
+    @include on-tablet {
+      margin-bottom: 10px;
+    }
   }
 
   &__price-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include on-tablet {
+      justify-content: start;
+    }
   }
 
   &__price {
-    padding-bottom: 25px;
+    margin-bottom: 24px;
 
     font-size: 18px;
     font-weight: 500;
     line-height: 100%;
     color: $color-white;
-  }
 
-  &__video-button {
-    position: relative;
-    margin-bottom: 32px;
+    @include on-tablet {
+      margin-bottom: 34px;
+    }
   }
 
   &__buy-wrapper {
-    padding-bottom: 16px;
-    padding-inline: 20px;
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - ($mobile-padding-inline * 2));
+
+    @include on-tablet {
+      bottom: 30px;
+      width: 460px;
+    }
   }
 }

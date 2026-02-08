@@ -3,8 +3,15 @@
     @include text-aside-mobile;
 
     display: block;
-    padding-left: 22px;
     padding-block: 11px;
+    padding-inline: 22px;
+
+    @include hover(color, $color-blue);
+    @include hover(background-color, $aside-link-bg-hover);
+
+    @include on-tablet {
+      padding-inline: 152px;
+    }
   }
 }
 
