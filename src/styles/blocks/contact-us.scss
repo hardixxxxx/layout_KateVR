@@ -1,7 +1,22 @@
 .contact-us {
   padding-block: 50px;
-  padding-inline: 20px;
+
+  @include padding-inline;
+
   background-color: $bg-black;
+
+  @include on-tablet {
+    grid-template-rows: repeat(3, min-content);
+    padding-block: 70px 130px;
+
+    @include section-grid;
+  }
+
+  &__title-wrapper {
+    @include on-tablet {
+      grid-column: 1 / 4;
+    }
+  }
 
   &__title-intro {
     @include text-mobile;
@@ -16,16 +31,64 @@
     @include h2-mobile;
 
     margin-bottom: 30px;
+
+    @include on-tablet {
+      margin-bottom: 0;
+    }
   }
 
   &__form {
     margin-bottom: 30px;
     padding-inline: 0;
+
+    @include on-tablet {
+      grid-column: 4 / -1;
+      grid-row: 1 / -1;
+      margin-bottom: 0;
+    }
   }
 
   &__text {
     @include text-mobile;
 
     font-size: 12px;
+
+    @include on-tablet {
+      grid-column: 1 / 4;
+      grid-row: 2;
+      font-size: 16px;
+    }
+  }
+
+  &__contacts {
+    display: none;
+
+    @include on-tablet {
+      display: block;
+      grid-column: 1 / 4;
+      grid-row: 3;
+    }
+  }
+
+  &__link-up {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: none;
+
+    width: 48px;
+    height: 48px;
+
+    background-image: url(../images/icons/icon-up.svg);
+    background-size: contain;
+
+    @include hover(background-image, url(../images/icons/icon-up-hover.svg));
+
+    @include on-tablet {
+      right: 34px;
+      bottom: 130px;
+      display: block;
+    }
   }
 }

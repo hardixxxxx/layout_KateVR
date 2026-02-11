@@ -2,6 +2,10 @@
   &__images {
     position: relative;
     height: 190px;
+
+    @include on-tablet {
+      height: 100%;
+    }
   }
 
   &__image {

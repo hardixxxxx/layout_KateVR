@@ -38,6 +38,12 @@
     transform: translateY(-50%);
 
     color: $color-blue;
+
+    transition: transform $animation-duration;
+
+    .dropdown--active & {
+      transform: rotate(180deg) translateY(50%);
+    }
   }
 
   &__content {

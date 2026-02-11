@@ -1,6 +1,14 @@
 .order-summary {
   display: flex;
   justify-content: space-around;
+  padding-block: 30px;
+
+  @include padding-inline;
+
+  @include on-tablet {
+    justify-content: space-between;
+    padding-block: 0 48px;
+  }
 
   &__quantity {
     display: flex;

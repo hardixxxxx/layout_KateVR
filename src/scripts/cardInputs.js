@@ -3,6 +3,8 @@ export function initCardInputs() {
   const cardInputs = cardField.querySelectorAll('.form__input');
   const expirationDateInput = document.querySelector('#expiration-date');
 
+  const cardBrandElem = document.querySelector('.card-brand');
+
   [...cardInputs].forEach((input, index) => {
     input.addEventListener('input', () => {
       input.value = input.value.replace(/\D/g, '');
@@ -10,19 +12,37 @@ export function initCardInputs() {
       if (input.value.length === 4 && cardInputs[index + 1]) {
         cardInputs[index + 1].focus();
       }
+
+      if (index === 0) {
+        const firstDigit = +input.value[0];
+
+        cardBrandElem.classList.remove(
+          'card-brand--visa',
+          'card-brand--mastercard',
+        );
+
+        if (!firstDigit) {
+          return;
+        }
+
+        if (firstDigit >= 0 && firstDigit <= 4) {
+          cardBrandElem.classList.add('card-brand--visa');
+        } else if (firstDigit >= 5 && firstDigit <= 9) {
+          cardBrandElem.classList.add('card-brand--mastercard');
+        }
+      }
     });
 
     input.addEventListener('keydown', (e) => {
       if (
-        e.key === 'Backspace'
-        && input.value.length === 0
-        && cardInputs[index - 1]
+        e.key === 'Backspace' &&
+        input.value.length === 0 &&
+        cardInputs[index - 1]
       ) {
         cardInputs[index - 1].focus();
       }
     });
   });
-
 
   expirationDateInput.addEventListener('input', () => {
     let inputValue = expirationDateInput.value.replace(/\D/g, '');

@@ -1,17 +1,53 @@
 .buy {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  @include section-grid;
 
-  min-height: 100vh;
-
+  grid-auto-rows: min-content;
+  height: 100vh;
   background: $bg-gradient;
+
+  &__top-bar {
+    grid-column: 1 / -1;
+    margin-bottom: 12px;
+
+    @include on-tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__checkout-steps {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__order-summary {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / 4;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include on-tablet {
+      display: block;
+      grid-column: 2 / -2;
+      width: 100%;
+    }
+  }
 
   &__wrapper {
     position: relative;
+    grid-column: 1 / -1;
   }
 
-  &__place-order {
+  &__place-order,
+  &__pay,
+  &__complete {
     position: absolute;
     top: 0;
     right: 0;
@@ -21,25 +57,12 @@
   }
 
   &__pay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
     transform: translateX(100%);
-
-    transition: transform $animation-duration;
   }
 
   &__complete {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
     transform: translateX(100%);
-
     margin-top: 60px;
-
-    transition: transform $animation-duration;
   }
 
   &--pay {
@@ -49,6 +72,13 @@
 
     .buy__pay {
       transform: translateX(0);
+    }
+
+    .buy__order-summary {
+      @include on-tablet {
+        grid-column: 2 / 4;
+        padding-left: 0;
+      }
     }
   }
 
@@ -65,7 +95,8 @@
       transform: translateX(0);
     }
 
-    .buy__order-summary {
+    .buy__order-summary,
+    .buy__image {
       display: none;
     }
   }

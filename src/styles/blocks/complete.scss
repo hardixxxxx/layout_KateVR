@@ -1,7 +1,10 @@
 .complete {
-  padding-inline: 20px;
+  @include padding-inline;
+  @include section-grid;
 
   &__title {
+    grid-column: 1 / -1;
+
     @include h1-mobile;
 
     margin-bottom: 16px;
@@ -11,17 +14,35 @@
       font-weight: 400;
       color: $color-blue;
     }
+
+    @include on-tablet {
+      @include h1;
+
+      grid-column: 2 / -2;
+    }
   }
 
   &__desc {
+    grid-column: 1 / -1;
+
     @include text-mobile;
 
     margin-bottom: 40px;
     color: $color-white;
     text-align: center;
+
+    @include on-tablet {
+      font-size: 18px;
+    }
   }
 
   &__button {
+    grid-column: 1 / -1;
+
     @include button;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+    }
   }
 }

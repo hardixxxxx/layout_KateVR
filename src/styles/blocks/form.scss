@@ -2,17 +2,72 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-
   padding-top: 20px;
-  padding-inline: 20px;
+
+  @include padding-inline;
+
+  @include on-tablet {
+    padding-top: 0;
+  }
+
+  &--grid {
+    @include section-grid;
+
+    row-gap: 30px;
+  }
+
+  &--padding--0 {
+    @include on-tablet {
+      padding: 0;
+    }
+  }
 
   &__field {
     position: relative;
+    grid-column: 1 / -1;
 
     &--card-info {
       display: flex;
       flex-direction: column;
       gap: $form-label-field-offset;
+    }
+
+    &--grid--left {
+      @include on-tablet {
+        grid-column: 1 / 4;
+      }
+    }
+
+    &--grid--right {
+      @include on-tablet {
+        grid-column: 4 / -1;
+      }
+    }
+
+    &--pay {
+      @include on-tablet {
+        grid-column: 2 / -2;
+      }
+    }
+  }
+
+  &__country {
+    grid-column: 1 / -1;
+
+    &--grid--left {
+      @include on-tablet {
+        grid-column: 1 / 4;
+      }
+    }
+  }
+
+  &__city {
+    grid-column: 1 / -1;
+
+    &--grid--right {
+      @include on-tablet {
+        grid-column: 4 / -1;
+      }
     }
   }
 
@@ -96,10 +151,26 @@
 
   &__submit {
     @include button;
+
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+      margin-top: 30px;
+    }
+
+    &--max-width--200 {
+      max-width: 200px;
+    }
   }
 
   &__card {
     position: relative;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+    }
   }
 
   &__inputs {
@@ -110,12 +181,24 @@
     max-width: 360px;
     margin-top: $form-label-field-offset;
     margin-inline: auto;
+
+    @include on-tablet {
+      max-width: 100%;
+      margin-inline: 0;
+    }
   }
 
   &__additional-card-info {
     display: flex;
+    grid-column: 1 / -1;
     gap: 30px;
     max-width: min-content;
+
+    @include on-tablet {
+      grid-column: 2 / -2;
+      gap: 100px;
+      justify-content: space-between;
+    }
   }
 
   &__field:focus-within &__line {

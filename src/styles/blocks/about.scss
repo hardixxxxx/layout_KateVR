@@ -1,7 +1,29 @@
 .about {
   padding-block: 50px;
-  padding-inline: 20px;
+
+  @include padding-inline;
+
   background: $bg-gradient;
+
+  @include on-tablet {
+    padding-block: 70px;
+  }
+
+  &__top {
+    @include on-tablet {
+      @include section-grid;
+
+      grid-template-rows: repeat(3, min-content);
+      margin-bottom: 80px;
+    }
+  }
+
+  &__slider {
+    @include on-tablet {
+      grid-column: 1 / 4;
+      grid-row: 1 / -1;
+    }
+  }
 
   &__title {
     @include h2-mobile;
@@ -12,18 +34,75 @@
       font-weight: 400;
       color: $color-blue;
     }
+
+    @include on-tablet {
+      grid-column: 4 / -1;
+      margin-block: 10px 30px;
+    }
   }
 
   &__desc {
     @include text-mobile;
 
     margin-top: 20px;
+
+    @include on-tablet {
+      grid-column: 4 / -1;
+      margin-block: 0 30px;
+    }
   }
 
   &__video-button {
     position: relative;
     margin-block: 24px 80px;
     margin-inline: auto;
+
+    @include on-tablet {
+      grid-column: 4 / -1;
+      margin: 0;
+    }
+  }
+
+  &__bottom {
+    @include on-tablet {
+      @include section-grid;
+    }
+  }
+
+  &__bottom-left {
+    @include on-tablet {
+      grid-column: span 4;
+    }
+  }
+
+  &__style-img {
+    display: block;
+    flex-shrink: 0;
+    width: 62px;
+    height: 253px;
+  }
+
+  &__bottom-right {
+    display: none;
+
+    & > .about__style-img:nth-child(odd) {
+      transform: rotate(180deg);
+    }
+
+    @for $i from 1 through 7 {
+      $opacity: 1 - ($i - 1) * 0.2;
+
+      & > .about__style-img:nth-child(#{$i}) {
+        opacity: $opacity;
+      }
+    }
+
+    @include on-tablet {
+      overflow: hidden;
+      display: flex;
+      grid-column: span 2;
+      gap: 20px;
+    }
   }
 
   &__pre-meet {

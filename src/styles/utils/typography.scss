@@ -49,3 +49,12 @@
   line-height: 130%;
   color: $color-white;
 }
+
+@mixin h1 {
+  font-family: inherit;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 130%;
+  color: $color-white;
+  text-transform: uppercase;
+}

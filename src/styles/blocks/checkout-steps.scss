@@ -2,8 +2,14 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    justify-items: center;
+
     padding-bottom: $steps-underline-offset;
     padding-inline: 20px;
+
+    @include on-tablet {
+      padding-inline: 0;
+    }
   }
 
   &__step {
@@ -15,6 +21,12 @@
 
     &--active {
       color: $color-blue;
+    }
+
+    @include on-tablet {
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
   }
 

@@ -22,6 +22,10 @@
   @include on-tablet {
     padding-inline: 34px;
   }
+
+  @include on-desktop {
+    padding-inline: 110px;
+  }
 }
 
 @mixin section-grid {
@@ -29,7 +33,7 @@
 
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
-  column-gap: 15px;
+  column-gap: 20px;
 
   @include on-desktop {
     --columns: 12;
@@ -70,4 +74,8 @@
 
   @include hover(color, $color-blue);
   @include hover(background-color, $color-white);
+
+  @include on-tablet {
+    height: 48px;
+  }
 }

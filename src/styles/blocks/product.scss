@@ -78,6 +78,12 @@
 
     width: calc(100% - ($mobile-padding-inline * 2));
 
+    &--hidden-on-desktop {
+      @include on-desktop {
+        display: none;
+      }
+    }
+
     @include on-tablet {
       bottom: 30px;
       width: 460px;

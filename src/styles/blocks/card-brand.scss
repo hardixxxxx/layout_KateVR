@@ -1,0 +1,25 @@
+.card-brand {
+  display: none;
+
+  @include on-tablet {
+    height: 30px;
+  }
+
+  &__img {
+    display: none;
+    height: 100%;
+  }
+
+  &--visa,
+  &--mastercard {
+    display: block;
+  }
+
+  &--visa &__img--visa {
+    display: block;
+  }
+
+  &--mastercard &__img--mastercard {
+    display: block;
+  }
+}

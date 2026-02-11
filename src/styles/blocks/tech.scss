@@ -1,7 +1,13 @@
 .tech {
   padding-block: 50px;
-  padding-inline: 20px;
+
+  @include padding-inline;
+
   background-color: $bg-black;
+
+  @include on-tablet {
+    padding-block: 80px;
+  }
 
   &__title {
     @include h2-mobile;
@@ -12,6 +18,10 @@
       font-weight: 400;
       color: $color-blue;
     }
+
+    @include on-tablet {
+      margin-bottom: 60px;
+    }
   }
 
   &__container {
@@ -19,6 +29,11 @@
     width: 200px;
     height: 200px;
     margin-inline: auto;
+
+    @include on-tablet {
+      width: 360px;
+      height: 360px;
+    }
   }
 
   &__image {
@@ -38,8 +53,14 @@
     background: none;
     background-image: url(../images/tech-specs/icons/button-icon.svg);
     background-repeat: no-repeat;
+    background-size: contain;
 
     @include hover(transform, scale(1.1) rotate(90deg));
+
+    @include on-tablet {
+      width: 62px;
+      height: 62px;
+    }
 
     &--sensor {
       top: -5%;
@@ -83,12 +104,21 @@
       top: 14%;
       left: 0;
       transform-origin: center top;
+
+      @include on-tablet {
+        transform-origin: 90% top;
+      }
     }
 
     &--battery {
       top: 59%;
       left: -20%;
       transform-origin: 73% top;
+
+      @include on-tablet {
+        left: 0;
+        transform-origin: right top;
+      }
     }
 
     &--connection {

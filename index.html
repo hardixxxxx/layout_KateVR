@@ -96,7 +96,7 @@
           ></a>
         </div>
 
-        <div class="product__buy-wrapper">
+        <div class="product__buy-wrapper product__buy-wrapper--hidden-on-desktop">
           <a
             class="buy-button"
             href="#buy"
@@ -403,7 +403,7 @@
         ></a>
       </div>
 
-      <div class="checkout-steps">
+      <div class="checkout-steps buy__checkout-steps">
         <ul class="checkout-steps__list">
           <li class="checkout-steps__step">Place Order</li>
           <li class="checkout-steps__step">Pay</li>
@@ -416,6 +416,12 @@
           <div class="checkout-steps__line"></div>
         </div>
       </div>
+
+      <img
+        class="buy__image"
+        src="./src/images/product-img-x2.png"
+        alt="product image"
+      />
 
       <section class="order-summary buy__order-summary">
         <div class="order-summary__quantity">
@@ -462,10 +468,10 @@
       <div class="buy__wrapper">
         <div class="place-order buy__place-order">
           <form
-            class="form"
+            class="form form--grid"
             novalidate
           >
-            <div class="form__field">
+            <div class="form__field form__field--grid--left">
               <input
                 class="form__input"
                 type="text"
@@ -482,7 +488,7 @@
               <span class="form__line"></span>
             </div>
 
-            <div class="form__field">
+            <div class="form__field form__field--grid--right">
               <input
                 class="form__input"
                 type="text"
@@ -499,7 +505,7 @@
               <span class="form__line"></span>
             </div>
 
-            <div class="form__field">
+            <div class="form__field form__field--grid--left">
               <input
                 class="form__input"
                 type="email"
@@ -516,7 +522,7 @@
               <span class="form__line"></span>
             </div>
 
-            <div class="form__field">
+            <div class="form__field form__field--grid--right">
               <input
                 class="form__input"
                 type="tel"
@@ -533,7 +539,7 @@
               <span class="form__line"></span>
             </div>
 
-            <div class="form__country">
+            <div class="form__country form__country--grid--left">
               <span class="form__label form__label--static">Country*</span>
 
               <div class="dropdown form__dropdown">
@@ -601,7 +607,7 @@
               </div>
             </div>
 
-            <div class="form__city">
+            <div class="form__city form__city--grid--right">
               <span class="form__label form__label--static">City*</span>
 
               <div class="dropdown form__dropdown">
@@ -684,7 +690,7 @@
               </div>
             </div>
 
-            <div class="form__field">
+            <div class="form__field form__field--grid--left">
               <input
                 class="form__input"
                 type="text"
@@ -701,7 +707,7 @@
               <span class="form__line"></span>
             </div>
 
-            <div class="form__field">
+            <div class="form__field form__field--grid--right">
               <input
                 class="form__input"
                 type="text"
@@ -729,7 +735,7 @@
 
         <div class="pay buy__pay">
           <form
-            class="form"
+            class="form form--grid form--padding--0"
             novalidate
           >
             <div class="form__card">
@@ -787,10 +793,23 @@
                   />
                   <span class="form__line"></span>
                 </div>
+
+                <div class="card-brand">
+                  <img
+                    class="card-brand__img card-brand__img--visa"
+                    src="./src/images/card-brand/visa.png"
+                    alt="Visa logo"
+                  />
+                  <img
+                    class="card-brand__img card-brand__img--mastercard"
+                    src="./src/images/card-brand/mastercard.png"
+                    alt="Mastercard logo"
+                  />
+                </div>
               </div>
             </div>
 
-            <div class="form__field">
+            <div class="form__field form__field--pay">
               <input
                 class="form__input"
                 type="text"
@@ -859,7 +878,7 @@
         <div class="complete buy__complete">
           <h1 class="complete__title">
             Thank you for
-            <br />
+
             <span class="complete__title--highlighted">your</span>
             order!
           </h1>
@@ -893,6 +912,12 @@
 
         <div class="information__wrapper">
           <div class="information__subsection">
+            <img
+              class="information__image"
+              src="./src/images/information/education.svg"
+              alt="Education image"
+            />
+
             <h3 class="information__subsection-title">Education</h3>
 
             <p class="information__subsection-desc">
@@ -901,6 +926,12 @@
           </div>
 
           <div class="information__subsection">
+            <img
+              class="information__image"
+              src="./src/images/information/real-estate.svg"
+              alt="Real estate image"
+            />
+
             <h3 class="information__subsection-title">Real estate</h3>
 
             <p class="information__subsection-desc">
@@ -910,6 +941,12 @@
           </div>
 
           <div class="information__subsection">
+            <img
+              class="information__image"
+              src="./src/images/information/fitness.svg"
+              alt="Fitness image"
+            />
+
             <h3 class="information__subsection-title">Fitness</h3>
 
             <p class="information__subsection-desc">
@@ -918,6 +955,12 @@
           </div>
 
           <div class="information__subsection">
+            <img
+              class="information__image"
+              src="./src/images/information/social.svg"
+              alt="Fitness image"
+            />
+
             <h3 class="information__subsection-title">Social iteractions</h3>
 
             <p class="information__subsection-desc">
@@ -931,13 +974,12 @@
         class="about"
         id="about"
       >
-        <h2 class="about__title">
-          About
-          <span class="about__title--highlighted">product</span>
-        </h2>
-
         <div class="about__top">
-          <div class="slider">
+          <h2 class="about__title">
+            About
+            <span class="about__title--highlighted">product</span>
+          </h2>
+          <div class="slider about__slider">
             <div class="slider__images">
               <img
                 class="slider__image"
@@ -1005,21 +1047,62 @@
         </div>
 
         <div class="about__bottom">
-          <span class="about__pre-meet">
-            Hello,
-            <br />
-          </span>
-          <h2 class="about__title">
-            Nice to meet
-            <span class="about__title--highlighted">you!</span>
-          </h2>
+          <div class="about__bottom-left">
+            <span class="about__pre-meet">
+              Hello,
+              <br />
+            </span>
+            <h2 class="about__title">
+              Nice to meet
+              <span class="about__title--highlighted">you!</span>
+            </h2>
 
-          <p class="about__desc">
-            KAT VR is an independent company dedicated to the research,
-            development, and sales of VR Locomotion products and solutions.
-            Founded in 2013, we have quickly grown to become one of the world`s
-            leading professional suppliers of VR games` & simulations` equipment
-          </p>
+            <p class="about__desc">
+              KAT VR is an independent company dedicated to the research,
+              development, and sales of VR Locomotion products and solutions.
+              Founded in 2013, we have quickly grown to become one of the
+              world`s leading professional suppliers of VR games` & simulations`
+              equipment
+            </p>
+          </div>
+
+          <div class="about__bottom-right">
+            <img
+              class="about__style-img"
+              src="./src/images/about/about-us.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="./src/images/about/about-us.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="./src/images/about/about-us.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="./src/images/about/about-us.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="./src/images/about/about-us.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="./src/images/about/about-us.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="./src/images/about/about-us.svg"
+              alt="Style image About Us"
+            />
+          </div>
         </div>
       </section>
 
@@ -1115,6 +1198,12 @@
 
         <div class="why-kat__container">
           <div class="why-kat__section">
+            <img
+              class="why-kat__img"
+              src="./src/images/why-kat/compatible.svg"
+              alt="Universally compatible image"
+            />
+
             <h3 class="why-kat__section-title">Universally compatible</h3>
 
             <p class="why-kat__desc">
@@ -1124,6 +1213,12 @@
           </div>
 
           <div class="why-kat__section">
+            <img
+              class="why-kat__img"
+              src="./src/images/why-kat/control.svg"
+              alt="VR/PC image"
+            />
+
             <h3 class="why-kat__section-title">VR/PC control panel</h3>
 
             <p class="why-kat__desc">
@@ -1133,6 +1228,12 @@
           </div>
 
           <div class="why-kat__section">
+            <img
+              class="why-kat__img"
+              src="./src/images/why-kat/wireless.svg"
+              alt="Wireless sensors image"
+            />
+
             <h3 class="why-kat__section-title">Wireless sensors</h3>
 
             <p class="why-kat__desc">
@@ -1144,7 +1245,7 @@
       </section>
 
       <section
-        class="contact-us"
+        class="contact-us main__contact-us"
         id="contact-us"
       >
         <div class="contact-us__title-wrapper">
@@ -1227,7 +1328,7 @@
           </div>
 
           <button
-            class="form__submit"
+            class="form__submit form__submit--max-width--200"
             type="submit"
           >
             Contact Us
@@ -1237,6 +1338,37 @@
         <p class="contact-us__text">
           Our manager will reply you within 15 minutes
         </p>
+
+        <div class="contacts contact-us__contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a
+                href="tel:+86-0571-86105373"
+                class="contacts__link"
+              >
+                +86-0571-86105373
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a
+                href="mailto:global@katvr.com"
+                class="contacts__link"
+              >
+                global@katvr.com
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a
+                href="mailto:overseas@katvr.com"
+                class="contacts__link"
+              >
+                overseas@katvr.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <a class="contact-us__link-up" href="#header"></a>
       </section>
     </main>
 
@@ -1290,7 +1422,7 @@
       </nav>
 
       <div class="footer__social">
-        <div class="contacts">
+        <div class="contacts contacts--hidden-on-wide">
           <ul class="contacts__list">
             <li class="contacts__item">
               <a
