@@ -2,6 +2,10 @@
   position: relative;
   width: 90px;
 
+  &--header {
+    width: min-content;
+  }
+
   &__trigger {
     cursor: pointer;
 
@@ -21,6 +25,11 @@
     &--left {
       justify-content: start;
     }
+
+    &--header {
+      padding-inline: 10px;
+      background-color: transparent;
+    }
   }
 
   &__value {
@@ -28,6 +37,10 @@
 
     &--font-size-s {
       font-size: 16px;
+    }
+
+    &--header {
+      color: $color-blue;
     }
   }
 
@@ -43,6 +56,10 @@
 
     .dropdown--active & {
       transform: rotate(180deg) translateY(50%);
+    }
+
+    &--header {
+      right: -4px;
     }
   }
 

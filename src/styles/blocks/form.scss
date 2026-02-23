@@ -14,10 +14,20 @@
     @include section-grid;
 
     row-gap: 30px;
+
+    @include on-tablet {
+      row-gap: 50px;
+    }
   }
 
   &--padding--0 {
     @include on-tablet {
+      padding: 0;
+    }
+  }
+
+  &--desktop--padding--0 {
+    @include on-desktop {
       padding: 0;
     }
   }
@@ -36,11 +46,19 @@
       @include on-tablet {
         grid-column: 1 / 4;
       }
+
+      @include on-desktop {
+        grid-column: span 6;
+      }
     }
 
     &--grid--right {
       @include on-tablet {
         grid-column: 4 / -1;
+      }
+
+      @include on-desktop {
+        grid-column: span 6;
       }
     }
 
@@ -58,6 +76,10 @@
       @include on-tablet {
         grid-column: 1 / 4;
       }
+
+      @include on-desktop {
+        grid-column: 1 / 7;
+      }
     }
   }
 
@@ -67,6 +89,10 @@
     &--grid--right {
       @include on-tablet {
         grid-column: 4 / -1;
+      }
+
+      @include on-desktop {
+        grid-column: 7 / -1;
       }
     }
   }

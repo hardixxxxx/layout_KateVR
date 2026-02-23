@@ -17,6 +17,10 @@
       width: 30px;
       height: 30px;
     }
+
+    @include on-desktop {
+      display: none;
+    }
   }
 
   &--close {

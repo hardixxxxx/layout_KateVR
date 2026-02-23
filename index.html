@@ -41,24 +41,108 @@
       id="header"
     >
       <div class="top-bar">
-        <a
-          href="/"
-          class="top-bar__logo-link"
-        >
-          <img
-            src="./src/images/logo.png"
-            alt="KatWR logo"
-            class="top-bar__logo"
-          />
-        </a>
+        <div class="top-bar__left">
+          <a
+            href="/"
+            class="top-bar__logo-link"
+          >
+            <img
+              src="./src/images/logo.png"
+              alt="KatWR logo"
+              class="top-bar__logo"
+            />
+          </a>
 
-        <a
-          href="#menu"
-          class="icon icon--menu"
-        ></a>
+          <div class="dropdown dropdown--header top-bar__dropdown">
+            <button
+              class="dropdown__trigger dropdown__trigger--header"
+              type="button"
+            >
+              <span class="dropdown__value dropdown__value--header">En</span>
+
+              <svg
+                class="dropdown__icon dropdown__icon--header"
+                width="8"
+                height="5"
+                viewBox="0 0 8 5"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3.89746 4.5L0 0L7.79458 0L3.89746 4.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+
+            <div class="dropdown__content">
+              <ul class="dropdown__list">
+                <li class="dropdown__item">En</li>
+                <li class="dropdown__item">Ua</li>
+                <li class="dropdown__item">Pl</li>
+                <li class="dropdown__item">De</li>
+                <li class="dropdown__item">Fr</li>
+                <li class="dropdown__item">Es</li>
+                <li class="dropdown__item">It</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-bar__right">
+          <a
+            href="#menu"
+            class="icon icon--menu"
+          ></a>
+
+          <nav class="navigation top-bar__navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a
+                  href="#about"
+                  class="navigation__link"
+                >
+                  About
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="#tech"
+                  class="navigation__link"
+                >
+                  Tech
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="#why-kat"
+                  class="navigation__link"
+                >
+                  Benefits
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="#contact-us"
+                  class="navigation__link"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="top-bar__buy-button-wrapper">
+            <a
+              class="buy-button"
+              href="#buy"
+            >
+              Buy Now
+            </a>
+          </div>
+        </div>
       </div>
 
-      <article class="product">
+      <article class="product header__product">
         <picture class="product__img-wrapper">
           <source
             media="(min-width: 768px)"
@@ -71,6 +155,26 @@
             alt="Product image"
           />
         </picture>
+
+        <div class="slider product__slider">
+          <div class="slider__images">
+            <img
+              class="slider__image"
+              src="./src/images/sllider/header/slide-1.png"
+              alt="slide 1"
+            />
+            <img
+              class="slider__image"
+              src="./src/images/sllider/header/slide-1.png"
+              alt="slide 2"
+            />
+            <img
+              class="slider__image"
+              src="./src/images/sllider/header/slide-1.png"
+              alt="slide 3"
+            />
+          </div>
+        </div>
 
         <div class="product__content">
           <h1 class="product__title">
@@ -96,7 +200,9 @@
           ></a>
         </div>
 
-        <div class="product__buy-wrapper product__buy-wrapper--hidden-on-desktop">
+        <div
+          class="product__buy-wrapper product__buy-wrapper--hidden-on-desktop"
+        >
           <a
             class="buy-button"
             href="#buy"
@@ -105,6 +211,47 @@
           </a>
         </div>
       </article>
+
+      <div class="header__bottom">
+        <nav class="header__bottom-nav">
+          <a
+            href="#faq"
+            class="header__link"
+          >
+            FAQ
+          </a>
+          <a
+            href="#help"
+            class="header__link"
+          >
+            Help
+          </a>
+        </nav>
+
+        <button class="header__more-button">More</button>
+
+        <div class="header__slider-control">
+          <div class="header__slider-buttons">
+            <button
+              class="header__button"
+              data-slider-control="prev"
+            >
+              Previous
+            </button>
+            <button
+              class="header__button"
+              data-slider-control="next"
+            >
+              Next
+            </button>
+          </div>
+          <div class="header__slider-lines">
+            <div class="header__slider-line"></div>
+            <div class="header__slider-line"></div>
+            <div class="header__slider-line"></div>
+          </div>
+        </div>
+      </div>
     </header>
     <aside
       class="menu page__menu"
@@ -399,11 +546,25 @@
 
         <a
           href="#"
-          class="icon icon--close"
+          class="icon icon--close buy__icon"
         ></a>
+
+        <div
+          class="checkout-steps top-bar__checkout-steps"
+          data-steps="top-steps"
+        >
+          <ul class="checkout-steps__list">
+            <li class="checkout-steps__step">Place Order</li>
+            <li class="checkout-steps__step">Pay</li>
+            <li class="checkout-steps__step">Complete</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="checkout-steps buy__checkout-steps">
+      <div
+        class="checkout-steps buy__checkout-steps"
+        data-steps="steps"
+      >
         <ul class="checkout-steps__list">
           <li class="checkout-steps__step">Place Order</li>
           <li class="checkout-steps__step">Pay</li>
@@ -468,7 +629,7 @@
       <div class="buy__wrapper">
         <div class="place-order buy__place-order">
           <form
-            class="form form--grid"
+            class="form form--grid form--desktop--padding--0"
             novalidate
           >
             <div class="form__field form__field--grid--left">
@@ -979,6 +1140,7 @@
             About
             <span class="about__title--highlighted">product</span>
           </h2>
+
           <div class="slider about__slider">
             <div class="slider__images">
               <img
@@ -1029,6 +1191,36 @@
                 class="slider__dot"
                 data-index="4"
               ></button>
+            </div>
+
+            <div class="slider__counter">
+              <span class="slider__counter-current">1</span>
+              /
+              <span class="slider__counter-total">5</span>
+            </div>
+
+            <div class="slider__control">
+              <div class="slider__buttons">
+                <button
+                  class="slider__button"
+                  data-slider-control="prev"
+                >
+                  Previous
+                </button>
+                <button
+                  class="slider__button"
+                  data-slider-control="next"
+                >
+                  Next
+                </button>
+              </div>
+              <div class="slider__lines">
+                <div class="slider__line"></div>
+                <div class="slider__line"></div>
+                <div class="slider__line"></div>
+                <div class="slider__line"></div>
+                <div class="slider__line"></div>
+              </div>
             </div>
           </div>
 
@@ -1110,79 +1302,97 @@
         class="tech"
         id="tech"
       >
-        <h2 class="tech__title">
-          Tech
-          <span class="tech__title--highlighted">specs</span>
-        </h2>
-
         <div class="tech__container">
-          <img
-            class="tech__image"
-            src="./src/images/tech-specs/tech-specs.png"
-            alt="tech image"
-          />
+          <h2 class="tech__title">
+            Tech
+            <span class="tech__title--highlighted">specs</span>
+          </h2>
 
-          <button
-            class="tech__button tech__button--sensor"
-            data-feature="sensor"
-          ></button>
-          <button
-            class="tech__button tech__button--battery"
-            data-feature="battery"
-          ></button>
-          <button
-            class="tech__button tech__button--connection"
-            data-feature="connection"
-          ></button>
-
-          <div
-            class="tech__specs tech__specs--sensor"
-            data-feature-content="sensor"
-          >
-            <h3 class="tech__specs-title">Sensor</h3>
-            <p class="tech__specs-desc">
-              Weight: 35g/1.23oz each
-              <br />
-              Dimension: 50mm/1.97in
-              <br />
-              24mm/0.94in
-              <br />
-              Light: LED lights
-            </p>
-          </div>
-
-          <div
-            class="tech__specs tech__specs--battery"
-            data-feature-content="battery"
-          >
-            <h3 class="tech__specs-title">Batterries</h3>
-            <p class="tech__specs-desc">
-              Type: Lthium-lon polymer batteries
-              <br />
-              Capacity: 370mAh
-              <br />
-              Battery life: 10h of continuous use 150 hours
-              <br />
-              on stand by
-              <br />
-              Charging: Fast charging - 1 hour
-              <br />
-              Charging voltage and current: 5V = 0.5A
-            </p>
-          </div>
-
-          <div
-            class="tech__specs tech__specs--connection"
-            data-feature-content="connection"
-          >
-            <h3 class="tech__specs-title">Connection</h3>
-            <p class="tech__specs-desc">
-              Wireless: Bluetooth 4.2
-              <br />
-              Signal range: 5m
-              <br />
-              Receiver: USB 2.0 and above
-            </p>
+          <div class="tech__content">
+            <img
+              class="tech__image"
+              src="./src/images/tech-specs/tech-specs.png"
+              alt="tech image"
+            />
+            <button
+              class="tech__button tech__button--sensor"
+              data-feature="sensor"
+            ></button>
+            <button
+              class="tech__button tech__button--battery"
+              data-feature="battery"
+            ></button>
+            <button
+              class="tech__button tech__button--connection"
+              data-feature="connection"
+            ></button>
+            <div
+              class="tech__specs tech__specs--sensor"
+              data-feature-content="sensor"
+            >
+              <h3 class="tech__specs-title">Sensor</h3>
+              <p class="tech__specs-desc">
+                Weight: 35g/1.23oz each
+                <br />
+                Dimension: 50mm/1.97in
+                <br />
+                24mm/0.94in
+                <br />
+                Light: LED lights
+              </p>
+            </div>
+            <div
+              class="tech__specs tech__specs--battery"
+              data-feature-content="battery"
+            >
+              <h3 class="tech__specs-title">Batterries</h3>
+              <p class="tech__specs-desc">
+                Type: Lthium-lon polymer batteries
+                <br />
+                Capacity: 370mAh
+                <br />
+                Battery life: 10h of continuous use 150 hours
+                <br />
+                on stand by
+                <br />
+                Charging: Fast charging - 1 hour
+                <br />
+                Charging voltage and current: 5V = 0.5A
+              </p>
+            </div>
+            <div
+              class="tech__specs tech__specs--connection"
+              data-feature-content="connection"
+            >
+              <h3 class="tech__specs-title">Connection</h3>
+              <p class="tech__specs-desc">
+                Wireless: Bluetooth 4.2
+                <br />
+                Signal range: 5m
+                <br />
+                Receiver: USB 2.0 and above
+              </p>
+            </div>
+            <img
+              class="tech__line tech__line--sensor"
+              src="./src/images/tech-specs/sensor-line.svg"
+              alt="decoration line"
+            />
+            <img
+              class="tech__line tech__line--ellipse"
+              src="./src/images/tech-specs/ellipse.svg"
+              alt="decoration line"
+            />
+            <img
+              class="tech__line tech__line--battery"
+              src="./src/images/tech-specs/bateries-line.svg"
+              alt="decoration line"
+            />
+            <img
+              class="tech__line tech__line--connection"
+              src="./src/images/tech-specs/connection-line.svg"
+              alt="decoration line"
+            />
           </div>
         </div>
       </section>
@@ -1208,7 +1418,8 @@
 
             <p class="why-kat__desc">
               KAT Loco offers universal compatibility across all major VR
-              headsets and platforms...
+              headsets and platforms allowing you to play any VR game with
+              support for Free Locomotion
             </p>
           </div>
 
@@ -1222,8 +1433,9 @@
             <h3 class="why-kat__section-title">VR/PC control panel</h3>
 
             <p class="why-kat__desc">
-              Our Multifunctional Software allows for quick access to KAT Loco`s
-              control panel both from...
+              Our Multifunctional Software allows for quick access to KAT Loco's
+              control panel both from a computer desktop, and directly from your
+              VR headset.
             </p>
           </div>
 
@@ -1238,9 +1450,19 @@
 
             <p class="why-kat__desc">
               What makes it even more advanced, KAT Loco is entirely wireless,
-              and comes with a...
+              and comes with a complete system of algorithms, super durable
+              batteries and more!
             </p>
           </div>
+        </div>
+
+        <div class="why-kat__buy-button">
+          <a
+            class="buy-button"
+            href="#buy"
+          >
+            Buy Now
+          </a>
         </div>
       </section>
 
@@ -1250,7 +1472,10 @@
       >
         <div class="contact-us__title-wrapper">
           <p class="contact-us__title-intro">Have any questions?</p>
-          <h2 class="contact-us__title">Get in touch</h2>
+          <h2 class="contact-us__title">
+            Get in
+            <span class="contact-us__title--highlighted">touch</span>
+          </h2>
         </div>
 
         <form
@@ -1368,7 +1593,10 @@
           </ul>
         </div>
 
-        <a class="contact-us__link-up" href="#header"></a>
+        <a
+          class="contact-us__link-up"
+          href="#header"
+        ></a>
       </section>
     </main>
 
@@ -1384,36 +1612,36 @@
         />
       </a>
 
-      <nav class="footer__nav">
-        <ul class="footer__list">
-          <li class="footer__item">
+      <nav class="navigation footer__navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
             <a
               href="#about"
-              class="footer__link"
+              class="navigation__link"
             >
               About
             </a>
           </li>
-          <li class="footer__item">
+          <li class="navigation__item">
             <a
               href="#tech"
-              class="footer__link"
+              class="navigation__link"
             >
               Tech
             </a>
           </li>
-          <li class="footer__item">
+          <li class="navigation__item">
             <a
               href="#why-kat"
-              class="footer__link"
+              class="navigation__link"
             >
               Benefits
             </a>
           </li>
-          <li class="footer__item">
+          <li class="navigation__item">
             <a
               href="#contact-us"
-              class="footer__link"
+              class="navigation__link"
             >
               Contact
             </a>
@@ -1539,5 +1767,29 @@
         </nav>
       </div>
     </footer>
+
+    <dialog class="video-modal">
+      <div class="video-modal__content">
+        <button class="video-modal__close"></button>
+
+        <div class="video-modal__video-container">
+          <iframe
+            class="video-modal__video"
+            title="YouTube video player"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>

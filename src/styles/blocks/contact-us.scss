@@ -12,9 +12,18 @@
     @include section-grid;
   }
 
+  @include on-desktop {
+    padding-block: 100px;
+  }
+
   &__title-wrapper {
     @include on-tablet {
       grid-column: 1 / 4;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
+      grid-row: 1;
     }
   }
 
@@ -35,6 +44,15 @@
     @include on-tablet {
       margin-bottom: 0;
     }
+
+    @include on-desktop {
+      @include h2-desktop;
+    }
+
+    &--highlighted {
+      font-weight: 400;
+      color: $color-blue;
+    }
   }
 
   &__form {
@@ -45,6 +63,10 @@
       grid-column: 4 / -1;
       grid-row: 1 / -1;
       margin-bottom: 0;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
     }
   }
 
@@ -58,6 +80,10 @@
       grid-row: 2;
       font-size: 16px;
     }
+
+    @include on-desktop {
+      grid-column: span 6;
+    }
   }
 
   &__contacts {
@@ -67,6 +93,10 @@
       display: block;
       grid-column: 1 / 4;
       grid-row: 3;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
     }
   }
 
@@ -89,6 +119,11 @@
       right: 34px;
       bottom: 130px;
       display: block;
+    }
+
+    @include on-desktop {
+      right: 110px;
+      bottom: 100px;
     }
   }
 }

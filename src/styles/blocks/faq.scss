@@ -1,14 +1,28 @@
 .faq {
-  min-height: 100vh;
+  height: 100vh;
   background-color: $bg-aside;
+
+  @include on-desktop {
+    max-height: 50%;
+    padding-bottom: 60px;
+  }
 
   &__top-bar {
     justify-content: end;
     margin-bottom: 24px;
+
+    @include on-desktop {
+      margin-bottom: 0;
+      padding: 18px;
+    }
   }
 
   &__content {
     @include padding-inline;
+
+    @include on-desktop {
+      padding-inline: 90px;
+    }
   }
 
   &__title {
@@ -20,12 +34,23 @@
       font-weight: 400;
       color: $color-blue;
     }
+
+    @include on-desktop {
+      @include h2-desktop;
+
+      width: 500px;
+      margin-bottom: 50px;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 13px;
+
+    @include on-desktop {
+      gap: 16px;
+    }
   }
 
   &__item {
@@ -78,6 +103,10 @@
 
     font-size: 12px;
     color: $color-info;
+
+    @include on-desktop {
+      font-size: 14px;
+    }
   }
 
   &__more-button {

@@ -1,4 +1,6 @@
 .contacts {
+  width: fit-content;
+  
   &--hidden-on-wide {
     @include on-tablet {
       display: none;

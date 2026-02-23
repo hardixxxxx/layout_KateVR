@@ -42,6 +42,7 @@ html {
       overflow: hidden;
 
       &::before {
+        pointer-events: all;
         opacity: 1;
       }
     }
@@ -67,10 +68,47 @@ html {
 
     transition: all 0.3s;
 
+    @include on-desktop {
+      top: 50%;
+
+      display: flex;
+      flex-direction: column;
+
+      max-width: 800px;
+      margin-inline: auto;
+
+      transition: none;
+    }
+
     &:target {
       pointer-events: all;
       transform: translateX(0);
       opacity: 1;
+
+      @include on-desktop {
+        transform: translateY(-50%);
+      }
     }
   }
+
+  // &__help,
+  // &__faq {
+  //   @include on-desktop {
+  //     top: 50%;
+
+  //     display: flex;
+  //     flex-direction: column;
+
+  //     max-width: 800px;
+  //     margin-inline: auto;
+
+  //     transition: none;
+  //   }
+
+  //   &:target {
+  //     @include on-desktop {
+  //       transform: translateY(-50%);
+  //     }
+  //   }
+  // }
 }

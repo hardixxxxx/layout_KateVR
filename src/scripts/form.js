@@ -40,10 +40,22 @@ export function initForm() {
 }
 
 export function setActiveStep(stepIndex = 0) {
-  const steps = document.querySelectorAll('.checkout-steps__step');
-  const lines = document.querySelectorAll('.checkout-steps__line');
+  const stepsElem = document.querySelector('[data-steps="steps"]');
+  const stepsTopElem = document.querySelector('[data-steps="top-steps"]');
+
+  const steps = stepsElem.querySelectorAll('.checkout-steps__step');
+  const lines = stepsElem.querySelectorAll('.checkout-steps__line');
+
+  const stepsTop = stepsTopElem.querySelectorAll('.checkout-steps__step');
 
   [...steps].forEach((step, index) => {
+    step.classList.toggle(
+      'checkout-steps__step--active',
+      index === stepIndex
+    );
+  });
+
+  [...stepsTop].forEach((step, index) => {
     step.classList.toggle(
       'checkout-steps__step--active',
       index === stepIndex

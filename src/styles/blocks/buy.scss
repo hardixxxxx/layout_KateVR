@@ -5,12 +5,31 @@
   height: 100vh;
   background: $bg-gradient;
 
+  @include on-desktop {
+    grid-template-rows: repeat(3, min-content);
+    padding-right: 110px;
+  }
+
+
   &__top-bar {
     grid-column: 1 / -1;
     margin-bottom: 12px;
 
     @include on-tablet {
       margin-bottom: 0;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / -1;
+      margin-bottom: 100px;
+
+      @include padding-inline;
+    }
+  }
+
+  &__icon {
+    @include on-desktop {
+      display: none;
     }
   }
 
@@ -20,6 +39,10 @@
     @include on-tablet {
       margin-bottom: 40px;
     }
+
+    @include on-desktop {
+      display: none;
+    }
   }
 
   &__order-summary {
@@ -27,6 +50,10 @@
 
     @include on-tablet {
       grid-column: 1 / 4;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 6;
     }
   }
 
@@ -38,11 +65,20 @@
       grid-column: 2 / -2;
       width: 100%;
     }
+
+    @include on-desktop {
+      grid-column: 1 / 8;
+    }
   }
 
   &__wrapper {
     position: relative;
     grid-column: 1 / -1;
+
+    @include on-desktop {
+      grid-column: 8 / -1;
+      grid-row: 2 / -1;
+    }
   }
 
   &__place-order,
@@ -54,10 +90,18 @@
     left: 0;
 
     transition: transform $animation-duration;
+
+    @include on-desktop {
+      transition: none;
+    }
   }
 
   &__pay {
     transform: translateX(100%);
+
+    @include on-desktop {
+      transform: scale(0) translateX(0);
+    }
   }
 
   &__complete {
@@ -67,7 +111,12 @@
 
   &--pay {
     .buy__place-order {
+      pointer-events: none;
       transform: translateX(-100%);
+
+      @include on-desktop {
+        transform: scale(0);
+      }
     }
 
     .buy__pay {
@@ -79,16 +128,30 @@
         grid-column: 2 / 4;
         padding-left: 0;
       }
+
+      @include on-desktop {
+        grid-column: 1 / 6;
+        padding-left: 110px;
+      }
     }
   }
 
   &--complete {
     .buy__place-order {
       transform: translateX(-100%);
+
+      @include on-desktop {
+        transform: scale(0);
+      }
     }
 
     .buy__pay {
       transform: translateX(-100%);
+
+      @include on-desktop {
+        pointer-events: none;
+        transform: scale(0);
+      }
     }
 
     .buy__complete {
@@ -98,6 +161,12 @@
     .buy__order-summary,
     .buy__image {
       display: none;
+    }
+
+    .buy__wrapper {
+      @include on-desktop {
+        grid-column: 2 / -1;
+      }
     }
   }
 }

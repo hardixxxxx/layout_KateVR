@@ -16,9 +16,13 @@
     }
 
     @include on-tablet {
-      @include h1;
+      @include h1-desktop;
 
       grid-column: 2 / -2;
+    }
+
+    @include on-desktop {
+      margin-bottom: 36px;
     }
   }
 
@@ -43,6 +47,10 @@
 
     @include on-tablet {
       grid-column: 2 / -2;
+    }
+
+    @include on-desktop {
+      grid-column: 5 / 9;
     }
   }
 }

@@ -9,6 +9,10 @@
     padding-block: 70px;
   }
 
+  @include on-desktop {
+    padding-block: 100px
+  }
+
   &__title {
     @include h2-mobile;
 
@@ -22,6 +26,12 @@
     @include on-tablet {
       text-align: center;
     }
+
+    @include on-desktop {
+      @include h2-desktop;
+
+      margin-bottom: 16px;
+    }
   }
 
   &__intro {
@@ -33,6 +43,10 @@
 
     @include on-tablet {
       text-align: center;
+    }
+
+    @include on-desktop {
+      font-size: 14px;
     }
   }
 
@@ -51,6 +65,10 @@
 
   &__title-wrapper {
     margin-bottom: 30px;
+
+    @include on-desktop {
+      margin-bottom: 80px;
+    }
   }
 
   &__wrapper {
@@ -69,8 +87,11 @@
     display: flex;
     grid-column: span 3;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+
+    @include on-tablet {
+      align-items: center;
+    }
   }
 
   &__subsection-title {
@@ -80,6 +101,10 @@
 
     @include on-tablet {
       margin-bottom: 20px;
+    }
+
+    @include on-desktop {
+      @include h3-desktop;
     }
   }
 
