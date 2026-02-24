@@ -205,8 +205,10 @@
       grid-column: 7 / 11;
     }
 
-    &--max-width--200 {
-      max-width: 200px;
+    &--tablet--max-width--200 {
+      @include on-tablet {
+        max-width: 200px;
+      }
     }
   }
 

@@ -12,14 +12,20 @@
 
   &--visa,
   &--mastercard {
-    display: block;
+    @include on-tablet {
+      display: block;
+    }
   }
 
   &--visa &__img--visa {
-    display: block;
+    @include on-tablet {
+      display: block;
+    }
   }
 
   &--mastercard &__img--mastercard {
-    display: block;
+    @include on-tablet {
+      display: block;
+    }
   }
 }
