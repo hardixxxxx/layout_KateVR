@@ -13,6 +13,11 @@
     align-items: center;
   }
 
+  @include on-desktop-wide {
+    max-width: $wide-desktop-width;
+    margin-inline: auto;
+  }
+
   &__right {
     display: flex;
     gap: 36px;

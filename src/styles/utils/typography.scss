@@ -100,3 +100,12 @@
   line-height: auto;
   color: $color-white;
 }
+
+@mixin h1-desktop-wide {
+  font-family: inherit;
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 130%;
+  color: $color-white;
+  text-transform: uppercase;
+}

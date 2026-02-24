@@ -10,6 +10,11 @@
     @include on-desktop {
       margin-top: 80px;
     }
+
+    @include on-desktop-wide {
+      margin-top: 200px;
+      margin-inline: auto;
+    }
   }
 
   &__bottom {
@@ -22,6 +27,12 @@
       align-items: start;
       justify-content: space-between;
       margin-top: 50px;
+    }
+
+    @include on-desktop-wide {
+      max-width: $wide-desktop-width;
+      margin-top: 100px;
+      margin-inline: auto;
     }
   }
 

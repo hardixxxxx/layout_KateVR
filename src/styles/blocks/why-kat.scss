@@ -13,6 +13,19 @@
     padding-block: 100px;
   }
 
+  @include on-desktop-wide {
+    padding: 160px 0;
+  }
+
+  &__content {
+    @include on-desktop-wide {
+      @include padding-inline;
+
+      max-width: $wide-desktop-width;
+      margin-inline: auto;
+    }
+  }
+
   &__title {
     @include h2-mobile;
 
@@ -39,6 +52,10 @@
     @include on-tablet {
       flex-direction: row;
       gap: 0 20px;
+    }
+
+    @include on-desktop-wide {
+      column-gap: 200px;
     }
   }
 

@@ -3,6 +3,12 @@
     @include section-grid;
   }
 
+  @include on-desktop-wide {
+    max-width: $wide-desktop-width;
+
+    @include padding-inline;
+  }
+
   &__img-wrapper {
     grid-column: 3/-1;
     grid-row: 1;
@@ -44,6 +50,10 @@
 
       @include section-grid;
     }
+
+    @include on-desktop-wide {
+      padding-inline: 0;
+    }
   }
 
   &__title {
@@ -61,6 +71,12 @@
 
       grid-column: 1 / -1;
     }
+
+    @include on-desktop-wide {
+      @include h1-desktop-wide;
+
+      margin-bottom: 36px
+    }
   }
 
   &__desc {
@@ -76,6 +92,12 @@
     @include on-desktop {
       grid-column: 3 / span 6;
       margin-bottom: 16px;
+    }
+
+    @include on-desktop-wide {
+      grid-column: 3 / span 10;
+      margin-bottom: 30px;
+      font-size: 20px;
     }
   }
 
@@ -103,6 +125,10 @@
 
     @include on-tablet {
       margin-bottom: 34px;
+    }
+
+    @include on-desktop-wide {
+      font-size: 20px;
     }
   }
 

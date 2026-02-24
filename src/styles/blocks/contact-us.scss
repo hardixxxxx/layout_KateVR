@@ -6,14 +6,33 @@
   background-color: $bg-black;
 
   @include on-tablet {
-    grid-template-rows: repeat(3, min-content);
     padding-block: 70px 130px;
-
-    @include section-grid;
   }
 
   @include on-desktop {
     padding-block: 100px;
+  }
+
+  @include on-desktop-wide {
+    padding-block: 156px 206px;
+    padding-inline: 0;
+  }
+
+  &__container {
+    position: relative;
+
+    @include on-tablet {
+      @include section-grid;
+
+      grid-template-rows: repeat(3, min-content);
+    }
+
+    @include on-desktop-wide {
+      @include padding-inline;
+
+      max-width: $wide-desktop-width;
+      margin-inline: auto;
+    }
   }
 
   &__title-wrapper {
@@ -24,6 +43,10 @@
     @include on-desktop {
       grid-column: span 6;
       grid-row: 1;
+    }
+
+    @include on-desktop-wide {
+      grid-column: span 8;
     }
   }
 
@@ -68,6 +91,10 @@
     @include on-desktop {
       grid-column: span 6;
     }
+
+    @include on-desktop-wide {
+      grid-column: span 8;
+    }
   }
 
   &__text {
@@ -83,6 +110,10 @@
 
     @include on-desktop {
       grid-column: span 6;
+    }
+
+    @include on-desktop-wide {
+      grid-column: span 8;
     }
   }
 
@@ -116,14 +147,13 @@
     @include hover(background-image, url(../images/icons/icon-up-hover.svg));
 
     @include on-tablet {
-      right: 34px;
-      bottom: 130px;
+      right: 0;
+      bottom: 0;
       display: block;
     }
 
-    @include on-desktop {
-      right: 110px;
-      bottom: 100px;
+    @include on-desktop-wide {
+      right: 234px;
     }
   }
 }

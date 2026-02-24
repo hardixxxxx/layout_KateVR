@@ -52,5 +52,9 @@
     @include on-desktop {
       grid-column: 5 / 9;
     }
+
+    @include on-desktop-wide {
+      grid-column: 7 / 11;
+    }
   }
 }

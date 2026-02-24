@@ -13,6 +13,11 @@
     padding-block: 100px
   }
 
+  @include on-desktop-wide {
+    padding: 158px 0;
+
+  }
+
   &__title {
     @include h2-mobile;
 
@@ -69,6 +74,13 @@
     @include on-desktop {
       margin-bottom: 80px;
     }
+
+    @include on-desktop-wide {
+      @include padding-inline;
+
+      max-width: $wide-desktop-width;
+      margin-inline: auto;
+    }
   }
 
   &__wrapper {
@@ -81,16 +93,26 @@
 
       row-gap: 40px;
     }
+
+    @include on-desktop-wide {
+      @include padding-inline;
+
+      max-width: $wide-desktop-width;
+      margin-inline: auto;
+    }
   }
 
   &__subsection {
     display: flex;
     grid-column: span 3;
     flex-direction: column;
-    justify-content: space-between;
 
     @include on-tablet {
       align-items: center;
+    }
+
+    @include on-desktop-wide {
+      grid-column: span 4;
     }
   }
 
@@ -111,7 +133,15 @@
   &__subsection-desc {
     @include text-mobile;
 
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    text-overflow: ellipsis;
+
     @include on-tablet {
+      display: inline;
       text-align: center;
     }
   }
