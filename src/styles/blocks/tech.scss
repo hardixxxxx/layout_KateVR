@@ -92,6 +92,8 @@
   }
 
   &__button {
+    cursor: pointer;
+
     position: absolute;
 
     display: block;
@@ -99,8 +101,6 @@
     width: 34px;
     height: 34px;
     border: none;
-
-    cursor: pointer;
 
     background: none;
     background-image: url(../images/tech-specs/icons/button-icon.svg);
