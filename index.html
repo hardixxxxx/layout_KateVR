@@ -1,0 +1,1800 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>KatVR</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/layout_KateVR/assets/favicon-BXZtSoWN.png"
+      type="image/x-icon"
+    />
+    <script type="module" crossorigin src="/layout_KateVR/assets/index-Dpbxet7n.js"></script>
+    <link rel="stylesheet" crossorigin href="/layout_KateVR/assets/index-BXjcGikT.css">
+  </head>
+  <body class="page__body">
+    <header
+      class="header"
+      id="header"
+    >
+      <div class="top-bar">
+        <div class="top-bar__left">
+          <a
+            href="/"
+            class="top-bar__logo-link"
+          >
+            <img
+              src="data:image/png;base64,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"
+              alt="KatWR logo"
+              class="top-bar__logo"
+            />
+          </a>
+
+          <div class="dropdown dropdown--header top-bar__dropdown">
+            <button
+              class="dropdown__trigger dropdown__trigger--header"
+              type="button"
+            >
+              <span class="dropdown__value dropdown__value--header">En</span>
+
+              <svg
+                class="dropdown__icon dropdown__icon--header"
+                width="8"
+                height="5"
+                viewBox="0 0 8 5"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3.89746 4.5L0 0L7.79458 0L3.89746 4.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+
+            <div class="dropdown__content">
+              <ul class="dropdown__list">
+                <li class="dropdown__item">En</li>
+                <li class="dropdown__item">Ua</li>
+                <li class="dropdown__item">Pl</li>
+                <li class="dropdown__item">De</li>
+                <li class="dropdown__item">Fr</li>
+                <li class="dropdown__item">Es</li>
+                <li class="dropdown__item">It</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-bar__right">
+          <a
+            href="#menu"
+            class="icon icon--menu"
+          ></a>
+
+          <nav class="navigation top-bar__navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a
+                  href="#about"
+                  class="navigation__link"
+                >
+                  About
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="#tech"
+                  class="navigation__link"
+                >
+                  Tech
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="#why-kat"
+                  class="navigation__link"
+                >
+                  Benefits
+                </a>
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="#contact-us"
+                  class="navigation__link"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="top-bar__buy-button-wrapper">
+            <a
+              class="buy-button"
+              href="#buy"
+            >
+              Buy Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <article class="product header__product">
+        <picture class="product__img-wrapper">
+          <source
+            media="(min-width: 768px)"
+            srcset="/layout_KateVR/assets/product-img-tablet-BSsj-7ZF.png"
+          />
+
+          <img
+            class="product__img"
+            src="/layout_KateVR/assets/product-img-x2-DxJ_56gU.png"
+            alt="Product image"
+          />
+        </picture>
+
+        <div class="slider product__slider">
+          <div class="slider__images">
+            <img
+              class="slider__image"
+              src="/layout_KateVR/assets/slide-1-ClqAjGBD.png"
+              alt="slide 1"
+            />
+            <img
+              class="slider__image"
+              src="/layout_KateVR/assets/slide-1-ClqAjGBD.png"
+              alt="slide 2"
+            />
+            <img
+              class="slider__image"
+              src="/layout_KateVR/assets/slide-1-ClqAjGBD.png"
+              alt="slide 3"
+            />
+          </div>
+        </div>
+
+        <div class="product__content">
+          <h1 class="product__title">
+            The new start of
+            <br />
+            <span class="product__title--secondary">VR locomotion</span>
+          </h1>
+
+          <p class="product__desc">
+            Discover the most comprehensive VR Locomotion system, and unlock
+            infinite motion in any games on any platforms!
+          </p>
+
+          <div class="product__price-wrapper">
+            <p class="product__price">1200$</p>
+          </div>
+
+          <a
+            class="video-button product__video-button"
+            aria-label="Open video"
+            href="https://www.youtube.com/watch?v=SvTbB19bvIw"
+            target="_blank"
+          ></a>
+        </div>
+
+        <div
+          class="product__buy-wrapper product__buy-wrapper--hidden-on-desktop"
+        >
+          <a
+            class="buy-button"
+            href="#buy"
+          >
+            Buy Now
+          </a>
+        </div>
+      </article>
+
+      <div class="header__bottom">
+        <nav class="header__bottom-nav">
+          <a
+            href="#faq"
+            class="header__link"
+          >
+            FAQ
+          </a>
+          <a
+            href="#help"
+            class="header__link"
+          >
+            Help
+          </a>
+        </nav>
+
+        <a class="header__more-button" href="#information">More</a>
+
+        <div class="header__slider-control">
+          <div class="header__slider-buttons">
+            <button
+              class="header__button"
+              data-slider-control="prev"
+            >
+              Previous
+            </button>
+            <button
+              class="header__button"
+              data-slider-control="next"
+            >
+              Next
+            </button>
+          </div>
+          <div class="header__slider-lines">
+            <div class="header__slider-line"></div>
+            <div class="header__slider-line"></div>
+            <div class="header__slider-line"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <aside
+      class="menu page__menu"
+      id="menu"
+    >
+      <div class="top-bar menu__top-bar">
+        <a
+          class="icon icon--close"
+          href="#"
+        ></a>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a
+              href="#about"
+              class="nav__link"
+            >
+              About
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#tech"
+              class="nav__link"
+            >
+              Tech
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#why-kat"
+              class="nav__link"
+            >
+              Benefits
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#contact-us"
+              class="nav__link"
+            >
+              Contact
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#language"
+              class="nav__link"
+            >
+              Language
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#faq"
+              class="nav__link"
+            >
+              FAQ
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              href="#help"
+              class="nav__link"
+            >
+              Help
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <aside
+      class="language page__language"
+      id="language"
+    >
+      <div class="top-bar language__top-bar">
+        <a
+          class="icon icon--back"
+          href="#menu"
+        ></a>
+      </div>
+
+      <ul class="language__list">
+        <li class="language__item">English</li>
+        <li class="language__item">Arabic</li>
+        <li class="language__item">Chinese (Simplified)</li>
+        <li class="language__item">Chinese (Traditional)</li>
+        <li class="language__item">French</li>
+        <li class="language__item">German</li>
+        <li class="language__item">Italian</li>
+        <li class="language__item">Polish</li>
+        <li class="language__item">Ukrainian</li>
+      </ul>
+    </aside>
+    <aside
+      class="help page__help"
+      id="help"
+    >
+      <div class="top-bar help__top-bar">
+        <a
+          href="#"
+          class="icon icon--close"
+        ></a>
+      </div>
+
+      <div class="help__content">
+        <h2 class="help__title">
+          How can we
+          <span class="help__title--highlighted">help</span>
+          you?
+        </h2>
+
+        <p class="help__desc">
+          Welcome to our help center. Our goal is to make the process of getting
+          acquainted and purchase as easy and pleasant as possible. Need help
+          with your KAT VR loco product? Many product questions can be resolved
+          by reviewing our Product Support
+          <a
+            class="help__link"
+            href="#faq"
+          >
+            FAQs
+          </a>
+          .
+          <br />
+          <br />
+          Please also feel free to
+          <a
+            class="help__link"
+            href="#contact-us"
+          >
+            Contact Us
+          </a>
+          directly should you need anything further. We’re happy to help.
+        </p>
+
+        <ul class="help__list">
+          <li class="help__item">
+            <a
+              href="#"
+              class="help__link"
+            >
+              Instruction manual
+            </a>
+          </li>
+          <li class="help__item">
+            <a
+              href="#"
+              class="help__link"
+            >
+              Where to go for a warranty
+            </a>
+          </li>
+          <li class="help__item">
+            <a
+              href="#"
+              class="help__link"
+            >
+              Service Policy
+            </a>
+          </li>
+        </ul>
+
+        <ul class="help__contacts">
+          <li class="help__contacts-item">
+            <a
+              href="tel:+86-0571-86105373"
+              class="help__contacts-link"
+            >
+              +86-0571-86105373
+            </a>
+          </li>
+          <li class="help__contacts-item">
+            <a
+              href="mailto:global@katvr.com"
+              class="help__contacts-link"
+            >
+              global@katvr.com
+            </a>
+          </li>
+          <li class="help__contacts-item">
+            <a
+              href="mailto:overseas@katvr.com"
+              class="help__contacts-link"
+            >
+              overseas@katvr.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <aside
+      class="faq page__faq"
+      id="faq"
+    >
+      <div class="top-bar faq__top-bar">
+        <a
+          href="#"
+          class="icon icon--close"
+        ></a>
+      </div>
+      <div class="faq__content">
+        <h1 class="faq__title">
+          Frequently asked
+          <span class="faq__title--secondary">questions</span>
+        </h1>
+        <ul class="faq__list">
+          <li class="faq__item">
+            <button
+              class="faq__question"
+              type="button"
+            >
+              What makes KAT loco different from other systems?
+            </button>
+            <div class="faq__answer">
+              <p class="faq__text">
+                Despite being approached from many different angles, all
+                traditional VR Locomotion systems including roomscale,
+                teleportation, and free locomotion failed to provide an optimal
+                solution capable of integrating high immersion with convenience.
+                KAT loco does all of that without repeating their flaws. Our
+                system offers a complete and versatile solution for an
+                affordable price what makes it a perfect choice for home-use. It
+                is also 100% user friendly, wireless, universally compatible,
+                and more! It even offers decoupled head and body directions!
+              </p>
+              <p class="faq__last-update">
+                Last updated: Wed, June 12 2019 7:07 PM UTC +03:00
+              </p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button
+              class="faq__question"
+              type="button"
+            >
+              Will it decrease my motion sickness?
+            </button>
+            <div class="faq__answer">
+              <p class="faq__text">This information will be added soon.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button
+              class="faq__question"
+              type="button"
+            >
+              Which VR headsets is it compatible with?
+            </button>
+            <div class="faq__answer">
+              <p class="faq__text">This information will be added soon.</p>
+            </div>
+          </li>
+          <li class="faq__item">
+            <button
+              class="faq__question"
+              type="button"
+            >
+              Is it compatible with Oculus Quest?
+            </button>
+            <div class="faq__answer">
+              <p class="faq__text">This information will be added soon.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <button
+        disabled
+        class="faq__more-button"
+      >
+        More
+      </button>
+    </aside>
+    <aside
+      class="buy page__buy"
+      id="buy"
+    >
+      <div class="top-bar buy__top-bar">
+        <a
+          href="/"
+          class="top-bar__logo-link"
+        >
+          <img
+            src="data:image/png;base64,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"
+            alt="KatWR logo"
+            class="top-bar__logo"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="icon icon--close buy__icon"
+        ></a>
+
+        <div
+          class="checkout-steps top-bar__checkout-steps"
+          data-steps="top-steps"
+        >
+          <ul class="checkout-steps__list">
+            <li class="checkout-steps__step">Place Order</li>
+            <li class="checkout-steps__step">Pay</li>
+            <li class="checkout-steps__step">Complete</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="checkout-steps buy__checkout-steps"
+        data-steps="steps"
+      >
+        <ul class="checkout-steps__list">
+          <li class="checkout-steps__step">Place Order</li>
+          <li class="checkout-steps__step">Pay</li>
+          <li class="checkout-steps__step">Complete</li>
+        </ul>
+
+        <div class="checkout-steps__lines">
+          <div class="checkout-steps__line"></div>
+          <div class="checkout-steps__line"></div>
+          <div class="checkout-steps__line"></div>
+        </div>
+      </div>
+
+      <img
+        class="buy__image"
+        src="/layout_KateVR/assets/product-img-x2-DxJ_56gU.png"
+        alt="product image"
+      />
+
+      <section class="order-summary buy__order-summary">
+        <div class="order-summary__quantity">
+          <span class="order-summary__label">Quantity</span>
+
+          <div
+            class="dropdown"
+            data-type="quantity"
+          >
+            <button class="dropdown__trigger">
+              <span class="dropdown__value">1</span>
+
+              <svg
+                class="dropdown__icon"
+                width="8"
+                height="5"
+                viewBox="0 0 8 5"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3.89746 4.5L0 0L7.79458 0L3.89746 4.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+
+            <div class="dropdown__content">
+              <ul class="dropdown__list">
+                <li class="dropdown__item">1</li>
+                <li class="dropdown__item">2</li>
+                <li class="dropdown__item">3</li>
+                <li class="dropdown__item">4</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-summary__price">
+          <span class="order-summary__label">Price</span>
+          <span class="order-summary__value">1200$</span>
+        </div>
+      </section>
+
+      <div class="buy__wrapper">
+        <div class="place-order buy__place-order">
+          <form
+            class="form form--grid form--desktop--padding--0"
+            novalidate
+          >
+            <div class="form__field form__field--grid--left">
+              <input
+                class="form__input"
+                type="text"
+                name="first-name"
+                id="first-name"
+                placeholder=" "
+              />
+              <label
+                class="form__label"
+                for="first-name"
+              >
+                First Name*
+              </label>
+              <span class="form__line"></span>
+            </div>
+
+            <div class="form__field form__field--grid--right">
+              <input
+                class="form__input"
+                type="text"
+                name="last-name"
+                id="last-name"
+                placeholder=" "
+              />
+              <label
+                class="form__label"
+                for="last-name"
+              >
+                Last Name*
+              </label>
+              <span class="form__line"></span>
+            </div>
+
+            <div class="form__field form__field--grid--left">
+              <input
+                class="form__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" "
+              />
+              <label
+                class="form__label"
+                for="email"
+              >
+                Email*
+              </label>
+              <span class="form__line"></span>
+            </div>
+
+            <div class="form__field form__field--grid--right">
+              <input
+                class="form__input"
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                placeholder=" "
+              />
+              <label
+                class="form__label"
+                for="phone-number"
+              >
+                Phone Number*
+              </label>
+              <span class="form__line"></span>
+            </div>
+
+            <div class="form__country form__country--grid--left">
+              <span class="form__label form__label--static">Country*</span>
+
+              <div class="dropdown form__dropdown">
+                <button
+                  class="dropdown__trigger dropdown__trigger--left"
+                  type="button"
+                >
+                  <span class="dropdown__value dropdown__value--font-size-s">
+                    Ukraine
+                  </span>
+
+                  <svg
+                    class="dropdown__icon"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3.89746 4.5L0 0L7.79458 0L3.89746 4.5Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+
+                <div class="dropdown__content">
+                  <ul class="dropdown__list">
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Ukraine
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      France
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Spain
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      United States
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      China
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Italy
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Turkey
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__city form__city--grid--right">
+              <span class="form__label form__label--static">City*</span>
+
+              <div class="dropdown form__dropdown">
+                <button
+                  class="dropdown__trigger dropdown__trigger--left"
+                  type="button"
+                >
+                  <span class="dropdown__value dropdown__value--font-size-s">
+                    Kyiv
+                  </span>
+
+                  <svg
+                    class="dropdown__icon"
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3.89746 4.5L0 0L7.79458 0L3.89746 4.5Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+
+                <div class="dropdown__content">
+                  <ul class="dropdown__list">
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Kyiv
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Lviv
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Odesa
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Kharkiv
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Dnipro
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Zaporizhzhia
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Vinnytsia
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Poltava
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Chernihiv
+                    </li>
+                    <li
+                      class="dropdown__item dropdown__item--font-size-s dropdown__item--left"
+                    >
+                      Ivano-Frankivsk
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field form__field--grid--left">
+              <input
+                class="form__input"
+                type="text"
+                name="adress"
+                id="adress"
+                placeholder=" "
+              />
+              <label
+                class="form__label"
+                for="adress"
+              >
+                Shipping Adress*
+              </label>
+              <span class="form__line"></span>
+            </div>
+
+            <div class="form__field form__field--grid--right">
+              <input
+                class="form__input"
+                type="text"
+                name="adress2"
+                id="adress2"
+                placeholder=" "
+              />
+              <label
+                class="form__label"
+                for="adress2"
+              >
+                Shipping Adress 2
+              </label>
+              <span class="form__line"></span>
+            </div>
+
+            <button
+              class="form__submit"
+              type="submit"
+            >
+              Purchase
+            </button>
+          </form>
+        </div>
+
+        <div class="pay buy__pay">
+          <form
+            class="form form--grid form--padding--0"
+            novalidate
+          >
+            <div class="form__card">
+              <span class="form__label form__label--static">Card Number*</span>
+
+              <div class="form__inputs">
+                <div class="form__field">
+                  <input
+                    class="form__input form__input--card form__input--width-4"
+                    type="text"
+                    name="card-number1"
+                    id="card-number1"
+                    maxlength="4"
+                    pattern="\d*"
+                    placeholder="0000"
+                  />
+                  <span class="form__line"></span>
+                </div>
+
+                <div class="form__field">
+                  <input
+                    class="form__input form__input--card form__input--width-4"
+                    type="text"
+                    name="card-number2"
+                    id="card-number2"
+                    maxlength="4"
+                    pattern="\d*"
+                    placeholder="0000"
+                  />
+                  <span class="form__line"></span>
+                </div>
+
+                <div class="form__field">
+                  <input
+                    class="form__input form__input--card form__input--width-4"
+                    type="text"
+                    name="card-number3"
+                    id="card-number3"
+                    maxlength="4"
+                    pattern="\d*"
+                    placeholder="0000"
+                  />
+                  <span class="form__line"></span>
+                </div>
+
+                <div class="form__field">
+                  <input
+                    class="form__input form__input--card form__input--width-4"
+                    type="text"
+                    name="card-number4"
+                    id="card-number4"
+                    maxlength="4"
+                    pattern="\d*"
+                    placeholder="0000"
+                  />
+                  <span class="form__line"></span>
+                </div>
+
+                <div class="card-brand">
+                  <img
+                    class="card-brand__img card-brand__img--visa"
+                    src="data:image/png;base64,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"
+                    alt="Visa logo"
+                  />
+                  <img
+                    class="card-brand__img card-brand__img--mastercard"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABECAYAAABgbACrAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAmuSURBVHgB7V1rbBzVFT53Zp92bAunCsFJWlEaJyRVQ51EeQjZcaSWVMahFBrRwI9WeRWpSiEq6Z+2gcKfomAeUksCREW05amoDxpRhEQMqjCIJvEPArVJiyixY0VNgr32rvc1l3Punbs761c2ie/dHWk+a7yzd+7c2b3ffOec+5plgEilUhts297HOd8AAaoWjLFe5OiBaDT6F5ZOp7+LaX+GAL6B4zjtRNwJ3L8BAvgGqLxuIo5DAN/BggC+RECcTxEQ51MExPkUAXE+RUCcTxEQ51MExPkUAXE+RUCcTxGCKgQfSUD+w37gA2fAOT1YSGf1dcAWXgPWgiawlzXDrCB1BuD8cWC5UYBsovgZ4tcA0Fa3GCBcB9WGqiGOCMoePgL5946J7WIgEu01KyH0rTYI33YzlA0i5+zbwM6+BezCiRKySsr37HMir7EF+FfukGRWASreyZx79xhknni6LLKmg4UqDH2vEwnswP2mqTMhQex/LwH79KVpySoHfF4r8Ou2A9TPkuIvExUjjszh+N5fQ+6NbpgtEIGR3TsnKZDIYv955ooImwi+oEMSWCEFVoQ4Utn43fcJ8nSAiIvs3gHW1egTP3hImEUtQNKcpfcAzGsD0zBOXBrNYubxp0A3SH2191hg1QyBbvCvbZfqMwijxJkijcXxXw2S18igdpcFrAa0wzR5xqLKzO9fNKO0RoDae22w5oJRsFPoQ0NzZORp4nomFOecPgNjbZuhUggtRuXda6CvAYlzVv/OSMRphLhRJI0jeboRXsEgspFNeYzIMwIKWNY9p73Rrt1Ukl8zQRqBJzlke6Y+lu3hELvdgL/DnhhqfpDP0wmt9oNMZPbwq2ACoRVoPtCv8Rn+8qfNxGHs0xdntc04FbQqjnpDTKnNXmhdNCBxzpMqQb/qsN9Tt+q0+jhTvu1SELudQXSjgUClrhmc9c+BLmhTnEO9+4ZIq8G2GgUmVYVEP8BIv7YIUxtxuSvoNL5UJA86Zeelxnn9I7Z8g5EfizeJV54ckEM8swh24ThwvxHn7e1v+MfLEFq+RKaf7IPPN22ByE3tUPfMY4U8ya4nIfXoASgXNKzTePKfYj/97A7If/yvss8lP2d/cxewa7cC84TtfKgb8u/vgcuF3fYC1mgdOL37gJ/D7z/yMeiCPlPpGQBVpBFYg6yo2La7SvIToaF1qyC0bIkghTqgM68fFeXQeyJaDdmIgVZP+dCA/mSoD+zlzYXzs9iRnet5H6xFTRBau9r9TAPiuDUft+bJHQI8OViiQpF2Tt4QbH67aGArVfLsiAz9r94gghFSLKt3v2d2VL4mfEgcT8gPH0YyJoIImJSOLqrh5UMlSbX374XhLdugruvBSeNspFCF6K33gfPJHIjvubuQFloPMHb/w/L4lr0wJUb6IPfOTjlWh+STWuzWFzDqLF6LyMy/gyMNzTsxzxIkLCFU6vQfLFEsV+E/vnIsV3ylHO6DHugjzg1M6O73ggio8VSwAuUbf+WvAMMJcFBR8e13ibR6NKeqjDQez382WFIuKVXkd8scP/QnOS5300ZxnWxP0YSqYSR1bo7MolvhfLhf+rrPXgUnKa9hL90lSLQWbRakiXMpBkoNIpG7ZKFIknOmG6zrtrrX6C9+qZS+4Ex7XBxaK5XlNZ1KbVTpBKpcUcHDo2julkJsyy2FvN4xO2vhAlEO+cIQ5iPkTh7Ff4li3vo5hfxEkDLTuZ6/QWLbjZD/pM/Ni6/JCRVLakHSiCTrSyuBK7l4/GD+xD7I9x2Ub5BAIp/Ux5E8Ue5wH5iANsXRpB5SnargDPqb2PclIaQ6qmQvKQ2vHCqkp19/E6KoGAKZRCI6iufSK21EoCKEhfrBvlbeCESUugaBylImllQRWTtzI12YSVIWmTjMzyIuYV4ziAGMvbpLlk8qVeQrcpMe36txdFyb4lidvPOLd3xp1JdBcsA1WZSHKpgUeH75jZDqOlA0Z5g2uudXIhJVqo1vv7NwPHnwNOaRFUvnX1j3ncJGplWB8o095uANNCA/HwYS1le3ygqngARNnyCNVPRaG5a1v/hhlR9TZlARGXbVjcEMQ4XKPH3F/DF9xGlTnIXRGx8YKiHAiySSc1XPa4VjQkkYAdbu2wuRTe0inRRDSqTjFpbjjSpVuRTAqH0bbwDKT36Qbgavouf85BTlQHIwZAdX+ct/JjZZpvv5MEChNDZ3pdinsJ65bTHR1nPzMujEPKvAXo9jjBRNhpQ5ZRDa9JaIRnOn/gi6oE1x9vXNJc2A/Id9hYokf6aaBYSxBx4uhP0xVJOCIohItd2ysmhyKVpU6qNjdH7q0SdF2lQRKykx8UtHbj//t2yrpTwmDU2j88F+cDAwIbVYX+4sHBc+S0WZw1Jxzn+fB/5/t5mA5LFc0ZSCiiNJdY0toAva+ippZCDZWTRpqlIJyr8V/I+HBFKLImxivol+UfnE8CoMahbKLi/bk1d8QRV9utegnpNC9xiZSDR3PDlz9MdqpMnj2dJJs6IJQel4PnPNpijLNZXOqt9q6/LS2sk8dvNWcD7S1whVoICj3IHSSDsDe5H+fk2aCc1b9T2FROuwTujbGyBjgDjnHFq7OL/ocA2pzV5kZrmE7olDWhVH5mqs7RZt8ye9iG7EoOAbMyuJzKmRGV+kNpp7EvdhVEkQgcWP7oDM40+DbqTf5GKbDmr2lwnioKlD+wxnM5OFWjeLlTe6EVmLg6QdU6uOxQ2qrVX/E7bMTM/DQdXknT82YjKtuZOJCyOhsQ4zA63O+j/IPsrYfK3T9Ix4amtZM0R37wATcM5xCK+RylMbKdEEOK0jIBNJTYbcKOiE0SnomSeegrQBf0fNA1IZTUGPrDNEGkaRuqfkeWF0KTEtgYr+VL/yqHmQ7Z0PoRVNYAKmSSNUZpnVG90w/mCXtoDFXtMC8QP7sTdjVMzpZ4NHQAc4jd/d8ButXVvToWILG6lLjExn9vDfYbZAzQ9SdPiHPyg9MHBELGxksziwyee1Af/6Lyq2PrziS4kp4hx/6BHIv3ccLhdiTgq2F4mwiSPuBdD8ECQQUH1XQiC/qkWaxQqozIuqedCoUOCzz0P+3WNl9W8SQdb1iyF8W6dYwD8tYVOBFHj2bYALx4GVMVWcyBKL9xd0BIv3ZwK195yP+gWZkx6XIZ620DL9Iv1LBc3EoiGc1FAJidX+uIzg0b4+RfBkIZ8iIM6nCIjzKQLifIqAOJ8iIM6nCIjzKQLifIqAOJ8iIM6nsOgnrSCA39DL6NcaLcs6CgH8hFuteDzeTTu49UKAqgbnvJt+rZF+avMLwUxKZtV3Iu4AAAAASUVORK5CYII="
+                    alt="Mastercard logo"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field form__field--pay">
+              <input
+                class="form__input"
+                type="text"
+                name="card-holder-name"
+                id="card-holder-name"
+                placeholder=" "
+              />
+              <label
+                class="form__label"
+                for="card-holder-name"
+              >
+                Card Holder Name*
+              </label>
+              <span class="form__line"></span>
+            </div>
+
+            <div class="form__additional-card-info">
+              <div class="form__field form__field--card-info">
+                <label
+                  class="form__label form__label--static"
+                  for="expiration-date"
+                >
+                  Expiration&nbsp;Date*
+                </label>
+
+                <input
+                  class="form__input form__input--card form__input--width-5"
+                  type="text"
+                  name="expiration-date"
+                  id="expiration-date"
+                  maxlength="5"
+                  placeholder="MM/YY"
+                />
+                <span class="form__line"></span>
+              </div>
+
+              <div class="form__field form__field--card-info">
+                <label
+                  class="form__label form__label--static"
+                  for="card-cvv"
+                >
+                  CVV*
+                </label>
+
+                <input
+                  class="form__input form__input--card form__input--width-3"
+                  type="text"
+                  name="card-cvv"
+                  id="card-cvv"
+                  maxlength="3"
+                  placeholder="000"
+                />
+                <span class="form__line"></span>
+              </div>
+            </div>
+
+            <button
+              class="form__submit"
+              type="submit"
+            >
+              Purchase
+            </button>
+          </form>
+        </div>
+
+        <div class="complete buy__complete">
+          <h1 class="complete__title">
+            Thank you for
+
+            <span class="complete__title--highlighted">your</span>
+            order!
+          </h1>
+
+          <p class="complete__desc">
+            Your order has been placed and is being processed. You will recive
+            an email with the order details
+          </p>
+
+          <a
+            class="complete__button"
+            href="#header"
+          >
+            Back to homepage
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="information" id="information">
+        <div class="information__title-wrapper">
+          <h2 class="information__title">
+            More than
+            <span class="information__title--highlighted">gaming!</span>
+          </h2>
+          <p class="information__intro">
+            This also made for people who are interested in...
+          </p>
+        </div>
+
+        <div class="information__wrapper">
+          <div class="information__subsection">
+            <img
+              class="information__image"
+              src="data:image/svg+xml,%3csvg%20width='98'%20height='81'%20viewBox='0%200%2098%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_3495_3050)'%3e%3cpath%20d='M62.2377%205.25343L49.2015%200.107666L0.275879%2019.0259L49.0005%2041.5001L97.7249%2019.018L64.8877%206.43234'%20stroke='%2305C2DF'%20stroke-miterlimit='10'/%3e%3cpath%20d='M47.9548%2015.9353L74.4969%2028.0987V71.9294'%20stroke='%2305C2DF'%20stroke-miterlimit='10'/%3e%3cpath%20d='M16.0005%2026L16.0005%2040'%20stroke='%2305C2DF'%20stroke-miterlimit='10'/%3e%3cpath%20d='M16.0808%2043.1498V56.7948C16.0808%2056.7948%2047.582%2083.9774%2081.7392%2056.7948V26.3096'%20stroke='%2305C2DF'%20stroke-miterlimit='10'/%3e%3cpath%20d='M74.4967%2080.9006C76.9477%2080.9006%2078.9346%2078.9044%2078.9346%2076.4419C78.9346%2073.9794%2076.9477%2071.9832%2074.4967%2071.9832C72.0457%2071.9832%2070.0588%2073.9794%2070.0588%2076.4419C70.0588%2078.9044%2072.0457%2080.9006%2074.4967%2080.9006Z'%20stroke='%2305C2DF'%20stroke-miterlimit='10'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_3495_3050'%3e%3crect%20width='98'%20height='81'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+              alt="Education image"
+            />
+
+            <h3 class="information__subsection-title">Education</h3>
+
+            <p class="information__subsection-desc">
+              Create aducational simulations, trainings and much more with
+              unlimited virtual space and minimum physical space
+            </p>
+          </div>
+
+          <div class="information__subsection">
+            <img
+              class="information__image"
+              src="/layout_KateVR/assets/real-estate-CiheqVX6.svg"
+              alt="Real estate image"
+            />
+
+            <h3 class="information__subsection-title">Real estate</h3>
+
+            <p class="information__subsection-desc">
+              Desighn architectural projects in a deeply realistic environment
+              allowing visitors to freely walk around, and feel their vibe
+            </p>
+          </div>
+
+          <div class="information__subsection">
+            <img
+              class="information__image"
+              src="data:image/svg+xml,%3csvg%20width='111'%20height='82'%20viewBox='0%200%20111%2082'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M48.5962%2017.6793C51.347%2021.474%2052.8012%2025.9634%2052.8012%2030.6615C52.8012%2042.87%2042.8688%2052.8024%2030.6602%2052.8024C18.4517%2052.8024%208.51929%2042.87%208.51929%2030.6615C8.51929%2018.4529%2018.4517%208.52051%2030.6602%208.52051C35.3507%208.52051%2039.8336%209.97016%2043.6244%2012.7127'%20stroke='%2305C2DF'%20stroke-width='1.00668'%20stroke-linejoin='round'/%3e%3cpath%20d='M30.6616%2021.8062C35.5439%2021.8062%2039.5161%2025.7793%2039.5161%2030.6616C39.5161%2035.5439%2035.5437%2039.5171%2030.6616%2039.5171C25.7796%2039.5171%2021.8062%2035.5439%2021.8062%2030.6616C21.8062%2025.7793%2025.7793%2021.8062%2030.6616%2021.8062Z'%20stroke='%2305C2DF'%20stroke-width='1.00668'/%3e%3cpath%20d='M109.299%200.503418C100.047%200.503418%2092.5202%208.03043%2092.5202%2017.2822V26.025C90.3076%2026.6813%2088.2716%2027.8681%2086.574%2029.5203'%20stroke='%2305C2DF'%20stroke-width='1.00668'/%3e%3cpath%20d='M47.6959%2055.5341C52.0431%2052.5473%2055.5722%2048.453%2057.871%2043.6599M91.323%2052.0961C89.6721%2050.5887%2087.8145%2049.3319%2085.8012%2048.3603L85.4651%2048.1981M82.7775%2035.8532C82.4%2037.1604%2082.2085%2038.5059%2082.2085%2039.8528V46.6267L80.4881%2045.7965C73.8623%2042.5991%2066.545%2040.7693%2059.1891%2040.4458C60.2447%2037.3763%2060.8192%2034.0851%2060.8192%2030.6619C60.8192%2014.0327%2047.2903%200.503906%2030.6614%200.503906C14.0325%200.503906%200.503418%2014.0327%200.503418%2030.6619C0.503418%2047.2911%2014.0322%2060.8199%2030.6614%2060.8199C35.7522%2060.8199%2040.5514%2059.55%2044.7621%2057.3133C46.3298%2058.6724%2072.2301%2080.94%2085.7769%2080.94C85.9426%2080.94%2086.1076%2080.9365%2086.2695%2080.9298C99.8255%2080.364%20110.074%2069.2479%20110.503%2068.775'%20stroke='%2305C2DF'%20stroke-width='1.00668'/%3e%3c/svg%3e"
+              alt="Fitness image"
+            />
+
+            <h3 class="information__subsection-title">Fitness</h3>
+
+            <p class="information__subsection-desc">
+              Combine business with pleasure, and discover countless ways to
+              stay fit while playing your favorite VR Games!
+            </p>
+          </div>
+
+          <div class="information__subsection">
+            <img
+              class="information__image"
+              src="/layout_KateVR/assets/social-C1Ha_yfT.svg"
+              alt="Fitness image"
+            />
+
+            <h3 class="information__subsection-title">Social iteractions</h3>
+
+            <p class="information__subsection-desc">
+              Hang out with your friends in the virtual world when you can`t
+              meet space requirements
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="about"
+        id="about"
+      >
+        <div class="about__top">
+          <h2 class="about__title">
+            About
+            <span class="about__title--highlighted">product</span>
+          </h2>
+
+          <div class="slider about__slider">
+            <div class="slider__images">
+              <img
+                class="slider__image"
+                src="/layout_KateVR/assets/slide1-BebKbNUs.png"
+                alt="slide 1"
+              />
+              <img
+                class="slider__image"
+                src="/layout_KateVR/assets/slide1-BebKbNUs.png"
+                alt="slide 2"
+              />
+              <img
+                class="slider__image"
+                src="/layout_KateVR/assets/slide1-BebKbNUs.png"
+                alt="slide 3"
+              />
+              <img
+                class="slider__image"
+                src="/layout_KateVR/assets/slide1-BebKbNUs.png"
+                alt="slide 4"
+              />
+              <img
+                class="slider__image"
+                src="/layout_KateVR/assets/slide1-BebKbNUs.png"
+                alt="slide 5"
+              />
+            </div>
+
+            <div class="slider__dots">
+              <button
+                class="slider__dot"
+                data-index="0"
+              ></button>
+              <button
+                class="slider__dot"
+                data-index="1"
+              ></button>
+              <button
+                class="slider__dot"
+                data-index="2"
+              ></button>
+              <button
+                class="slider__dot"
+                data-index="3"
+              ></button>
+              <button
+                class="slider__dot"
+                data-index="4"
+              ></button>
+            </div>
+
+            <div class="slider__counter">
+              <span class="slider__counter-current">1</span>
+              /
+              <span class="slider__counter-total">5</span>
+            </div>
+
+            <div class="slider__control">
+              <div class="slider__buttons">
+                <button
+                  class="slider__button"
+                  data-slider-control="prev"
+                >
+                  Previous
+                </button>
+                <button
+                  class="slider__button"
+                  data-slider-control="next"
+                >
+                  Next
+                </button>
+              </div>
+              <div class="slider__lines">
+                <div class="slider__line"></div>
+                <div class="slider__line"></div>
+                <div class="slider__line"></div>
+                <div class="slider__line"></div>
+                <div class="slider__line"></div>
+              </div>
+            </div>
+          </div>
+
+          <p class="about__desc">
+            KAT loco is a foot-based VR locomotion system that gives complete
+            physical control over lower-body actions, allowing you to freely
+            walk, run, and carry out just any other movement in virtual reality.
+          </p>
+
+          <a
+            class="video-button about__video-button"
+            aria-label="Open video"
+            href="https://www.youtube.com/watch?v=SvTbB19bvIw"
+            target="_blank"
+          ></a>
+        </div>
+
+        <div class="about__bottom">
+          <div class="about__bottom-left">
+            <span class="about__pre-meet">
+              Hello,
+              <br />
+            </span>
+            <h2 class="about__title">
+              Nice to meet
+              <span class="about__title--highlighted">you!</span>
+            </h2>
+
+            <p class="about__desc">
+              KAT VR is an independent company dedicated to the research,
+              development, and sales of VR Locomotion products and solutions.
+              Founded in 2013, we have quickly grown to become one of the
+              world`s leading professional suppliers of VR games` & simulations`
+              equipment
+            </p>
+          </div>
+
+          <div class="about__bottom-right">
+            <img
+              class="about__style-img"
+              src="/layout_KateVR/assets/about-us-BRIj6JCr.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="/layout_KateVR/assets/about-us-BRIj6JCr.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="/layout_KateVR/assets/about-us-BRIj6JCr.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="/layout_KateVR/assets/about-us-BRIj6JCr.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="/layout_KateVR/assets/about-us-BRIj6JCr.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="/layout_KateVR/assets/about-us-BRIj6JCr.svg"
+              alt="Style image About Us"
+            />
+            <img
+              class="about__style-img"
+              src="/layout_KateVR/assets/about-us-BRIj6JCr.svg"
+              alt="Style image About Us"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="tech"
+        id="tech"
+      >
+        <div class="tech__container">
+          <h2 class="tech__title">
+            Tech
+            <span class="tech__title--highlighted">specs</span>
+          </h2>
+
+          <div class="tech__content">
+            <img
+              class="tech__image"
+              src="/layout_KateVR/assets/tech-specs-B2rZwaXK.png"
+              alt="tech image"
+            />
+            <button
+              class="tech__button tech__button--sensor"
+              data-feature="sensor"
+            ></button>
+            <button
+              class="tech__button tech__button--battery"
+              data-feature="battery"
+            ></button>
+            <button
+              class="tech__button tech__button--connection"
+              data-feature="connection"
+            ></button>
+            <div
+              class="tech__specs tech__specs--sensor"
+              data-feature-content="sensor"
+            >
+              <h3 class="tech__specs-title">Sensor</h3>
+              <p class="tech__specs-desc">
+                Weight: 35g/1.23oz each
+                <br />
+                Dimension: 50mm/1.97in
+                <br />
+                24mm/0.94in
+                <br />
+                Light: LED lights
+              </p>
+            </div>
+            <div
+              class="tech__specs tech__specs--battery"
+              data-feature-content="battery"
+            >
+              <h3 class="tech__specs-title">Batterries</h3>
+              <p class="tech__specs-desc">
+                Type: Lthium-lon polymer batteries
+                <br />
+                Capacity: 370mAh
+                <br />
+                Battery life: 10h of continuous use 150 hours
+                <br />
+                on stand by
+                <br />
+                Charging: Fast charging - 1 hour
+                <br />
+                Charging voltage and current: 5V = 0.5A
+              </p>
+            </div>
+            <div
+              class="tech__specs tech__specs--connection"
+              data-feature-content="connection"
+            >
+              <h3 class="tech__specs-title">Connection</h3>
+              <p class="tech__specs-desc">
+                Wireless: Bluetooth 4.2
+                <br />
+                Signal range: 5m
+                <br />
+                Receiver: USB 2.0 and above
+              </p>
+            </div>
+
+            <picture>
+              <source
+                media="(min-width: 1920px)"
+                srcset="data:image/svg+xml,%3csvg%20width='432'%20height='72'%20viewBox='0%200%20432%2072'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5%203H431V72'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='3'%20cy='3'%20r='3'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+              />
+              <img
+                class="tech__line tech__line--sensor"
+                src="data:image/svg+xml,%3csvg%20width='404'%20height='72'%20viewBox='0%200%20404%2072'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.5%203H403V72'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='3'%20cy='3'%20r='3'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+                alt="decoration line"
+              />
+            </picture>
+
+            <picture>
+              <source
+                media="(min-width: 1920px)"
+                srcset="data:image/svg+xml,%3csvg%20width='283'%20height='245'%20viewBox='0%200%20283%20245'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M280%205.50003V242H3.5'%20stroke='%2305C2DF'/%3e%3cpath%20d='M283%203.00001C283%204.65686%20281.657%206.00001%20280%206.00001C278.343%206.00001%20277%204.65686%20277%203.00001C277%201.34315%20278.343%205.82984e-06%20280%205.82984e-06C281.657%205.82984e-06%20283%201.34315%20283%203.00001Z'%20fill='%2305C2DF'/%3e%3ccircle%20cx='3'%20cy='242'%20r='3'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+              />
+              <img
+                class="tech__line tech__line--battery"
+                src="data:image/svg+xml,%3csvg%20width='192'%20height='245'%20viewBox='0%200%20192%20245'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M188.5%201.45853V241.959H3.5'%20stroke='%2305C2DF'/%3e%3cpath%20d='M191.5%203.00001C191.5%204.65686%20190.157%206.00001%20188.5%206.00001C186.843%206.00001%20185.5%204.65686%20185.5%203.00001C185.5%201.34315%20186.843%205.82984e-06%20188.5%205.82984e-06C190.157%205.82984e-06%20191.5%201.34315%20191.5%203.00001Z'%20fill='%2305C2DF'/%3e%3ccircle%20cx='3'%20cy='241.959'%20r='3'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+                alt="decoration line"
+              />
+            </picture>
+
+            <picture>
+              <source
+                media="(min-width: 1920px)"
+                srcset="data:image/svg+xml,%3csvg%20width='241'%20height='113'%20viewBox='0%200%20241%20113'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0.5%20110H148V3H237'%20stroke='%2305C2DF'/%3e%3cpath%20d='M6%20109.5C6%20111.157%204.65685%20112.5%203%20112.5C1.34315%20112.5%200%20111.157%200%20109.5C0%20107.843%201.34315%20106.5%203%20106.5C4.65685%20106.5%206%20107.843%206%20109.5Z'%20fill='%2305C2DF'/%3e%3cpath%20d='M240.958%203C240.958%204.65685%20239.615%206%20237.958%206C236.301%206%20234.958%204.65685%20234.958%203C234.958%201.34315%20236.301%200%20237.958%200C239.615%200%20240.958%201.34315%20240.958%203Z'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+              />
+              <img
+                class="tech__line tech__line--connection"
+                src="data:image/svg+xml,%3csvg%20width='134'%20height='113'%20viewBox='0%200%20134%20113'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2.95898%20110H40.959V3H129.959'%20stroke='%2305C2DF'/%3e%3cpath%20d='M6%20110C6%20111.657%204.65685%20113%203%20113C1.34315%20113%200%20111.657%200%20110C0%20108.343%201.34315%20107%203%20107C4.65685%20107%206%20108.343%206%20110Z'%20fill='%2305C2DF'/%3e%3cpath%20d='M133.917%203C133.917%204.65685%20132.574%206%20130.917%206C129.26%206%20127.917%204.65685%20127.917%203C127.917%201.34315%20129.26%200%20130.917%200C132.574%200%20133.917%201.34315%20133.917%203Z'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+                alt="decoration line"
+              />
+            </picture>
+
+            <img
+              class="tech__line tech__line--ellipse"
+              src="data:image/svg+xml,%3csvg%20width='46'%20height='202'%20viewBox='0%200%2046%20202'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M44.7254%200.357021C19.2245%2025.3604%202.6721%2059.6618%200.697334%2098.1721C-1.30555%20137.231%2012.0516%20173.516%2035.4695%20201.146'%20stroke='%2305C2DF'/%3e%3c/svg%3e"
+              alt="decoration line"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="why-kat"
+        id="why-kat"
+      >
+        <div class="why-kat__content">
+          <h2 class="why-kat__title">
+            Why&nbsp;&nbsp;
+            <span class="why-kat__title--highlighted">kat loco?</span>
+          </h2>
+          <div class="why-kat__container">
+            <div class="why-kat__section">
+              <img
+                class="why-kat__img"
+                src="data:image/svg+xml,%3csvg%20width='80'%20height='80'%20viewBox='0%200%2080%2080'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M36.0137%2027.079V20.0687M52.646%2034.3643H60.756M22.9553%2044.811H27.3539M44.9484%2059.5189V52.5086'%20stroke='%2305C2DF'/%3e%3crect%20x='27.7166'%20y='27.4416'%20width='24.567'%20height='24.567'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='32.3901'%20y='32.1151'%20width='15.4948'%20height='15.4948'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='60.9812'%20y='0.5'%20width='18.5189'%20height='18.5189'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='65.3796'%20y='4.89862'%20width='9.99656'%20height='9.99656'%20rx='2.5'%20stroke='%2305C2DF'/%3e%3crect%20x='0.5'%20y='0.5'%20width='18.5189'%20height='18.5189'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='4.89868'%20y='4.89862'%20width='9.99656'%20height='9.99656'%20rx='2.5'%20stroke='%2305C2DF'/%3e%3crect%20x='1.32471'%20y='60.4313'%20width='18.5189'%20height='18.5189'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='5.72339'%20y='64.8299'%20width='9.99656'%20height='9.99656'%20rx='2.5'%20stroke='%2305C2DF'/%3e%3crect%20x='60.9812'%20y='60.4313'%20width='18.5189'%20height='18.5189'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3crect%20x='65.3796'%20y='64.8299'%20width='9.99656'%20height='9.99656'%20rx='2.5'%20stroke='%2305C2DF'/%3e%3cpath%20d='M45.2234%2027.079V9.89691H60.3437'%20stroke='%2305C2DF'/%3e%3cpath%20d='M27.354%2037.1134L9.89697%2037.1134L9.89698%2019.5189'%20stroke='%2305C2DF'/%3e%3cpath%20d='M52.7834%2040.9622L69.9656%2040.9622L69.9656%2059.9313'%20stroke='%2305C2DF'/%3e%3cpath%20d='M36.5635%2052.5086L36.5635%2069.6907L20.2061%2069.6907'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='36.0138'%20cy='17.5945'%20r='1.97423'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='63.2303'%20cy='34.3643'%20r='1.97423'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='20.6185'%20cy='44.811'%20r='1.97423'%20stroke='%2305C2DF'/%3e%3ccircle%20cx='44.8109'%20cy='61.8557'%20r='1.97423'%20stroke='%2305C2DF'/%3e%3c/svg%3e"
+                alt="Universally compatible image"
+              />
+              <h3 class="why-kat__section-title">Universally compatible</h3>
+              <p class="why-kat__desc">
+                KAT Loco offers universal compatibility across all major VR
+                headsets and platforms allowing you to play any VR game with
+                support for Free Locomotion
+              </p>
+            </div>
+            <div class="why-kat__section">
+              <img
+                class="why-kat__img"
+                src="data:image/svg+xml,%3csvg%20width='89'%20height='81'%20viewBox='0%200%2089%2081'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20x='2.08081'%20y='1.93628'%20width='85.3669'%20height='60.2803'%20rx='3.5'%20stroke='%2305C2DF'/%3e%3cline%20x1='1.58081'%20y1='52.1628'%20x2='87.9477'%20y2='52.1628'%20stroke='%2305C2DF'/%3e%3cline%20x1='40.5215'%20y1='57.4289'%20x2='48.4741'%20y2='57.4289'%20stroke='%2305C2DF'%20stroke-linecap='round'/%3e%3crect%20x='27.3555'%20y='62.7379'%20width='34.284'%20height='5.22378'%20stroke='%2305C2DF'/%3e%3crect%20x='16.8235'%20y='74.2279'%20width='55.3491'%20height='5.22378'%20stroke='%2305C2DF'/%3e%3cpath%20d='M62.0032%2068.4828L70.843%2073.7064H18.1526L26.9934%2068.4828H62.0032Z'%20stroke='%2305C2DF'/%3e%3cpath%20d='M25.0804%2013.7954L33.0804%2036.1591H33.1713L41.1713%2013.7954H41.944L33.6258%2037.0682H32.6258L24.3077%2013.7954H25.0804ZM46.6173%2037.0682V13.7954H53.4355C54.7385%2013.7954%2055.89%2014.072%2056.89%2014.625C57.8976%2015.178%2058.6855%2015.9508%2059.2537%2016.9432C59.8294%2017.9356%2060.1173%2019.0985%2060.1173%2020.4318C60.1173%2021.75%2059.8294%2022.9053%2059.2537%2023.8977C58.6855%2024.8826%2057.8976%2025.6515%2056.89%2026.2045C55.89%2026.75%2054.7385%2027.0227%2053.4355%2027.0227H46.981V26.2954H53.4355C54.6022%2026.2954%2055.6325%2026.053%2056.5264%2025.5682C57.4204%2025.0833%2058.1211%2024.4015%2058.6287%2023.5227C59.1363%2022.6439%2059.39%2021.6136%2059.39%2020.4318C59.39%2019.2424%2059.1363%2018.2045%2058.6287%2017.3182C58.1211%2016.4318%2057.4204%2015.7462%2056.5264%2015.2614C55.6325%2014.7689%2054.6022%2014.5227%2053.4355%2014.5227H47.3446V37.0682H46.6173ZM55.481%2026.4773L61.2082%2037.0682H60.39L54.6628%2026.4773H55.481Z'%20fill='%2305C2DF'/%3e%3c/svg%3e"
+                alt="VR/PC image"
+              />
+              <h3 class="why-kat__section-title">VR/PC control panel</h3>
+              <p class="why-kat__desc">
+                Our Multifunctional Software allows for quick access to KAT Loco's
+                control panel both from a computer desktop, and directly from your
+                VR headset.
+              </p>
+            </div>
+            <div class="why-kat__section">
+              <img
+                class="why-kat__img"
+                src="data:image/svg+xml,%3csvg%20width='107'%20height='77'%20viewBox='0%200%20107%2077'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='53.1539'%20cy='38.6755'%20r='12.8303'%20stroke='%2305C2DF'/%3e%3cpath%20d='M66.8169%2025.0463C71.2347%2027.9688%2074.1486%2032.9818%2074.1486%2038.6754C74.1486%2044.369%2071.2347%2049.382%2066.8169%2052.3045'%20stroke='%2305C2DF'/%3e%3cpath%20d='M66.9851%2052.1725L72.9838%2059.8374'%20stroke='%2305C2DF'/%3e%3cpath%20d='M72.8155%2060.004C79.8439%2055.3947%2084.4796%2047.4885%2084.4796%2038.5088C84.4796%2029.5292%2079.8439%2021.6229%2072.8155%2017.0137L66.8169%2025.1785'%20stroke='%2305C2DF'/%3e%3cpath%20d='M79.4821%209.0155C88.9201%2015.2684%2095.1452%2025.9939%2095.1452%2038.1756C95.1452%2050.3573%2088.9201%2061.0828%2079.4821%2067.3357'%20stroke='%2305C2DF'/%3e%3cpath%20d='M79.4823%209.18211L85.481%200.684021C97.7304%208.75917%20105.81%2022.6105%20105.81%2038.3422C105.81%2054.074%2097.7304%2067.9253%2085.481%2076.0004L79.3157%2067.3357'%20stroke='%2305C2DF'/%3e%3cpath%20d='M39.4891%2025.0463C35.0713%2027.9688%2032.1575%2032.9818%2032.1575%2038.6754C32.1575%2044.369%2035.0713%2049.382%2039.4891%2052.3045'%20stroke='%2305C2DF'/%3e%3cpath%20d='M39.3247%2052.1725L33.3261%2059.8374'%20stroke='%2305C2DF'/%3e%3cpath%20d='M33.4905%2060.004C26.4621%2055.3947%2021.8264%2047.4885%2021.8264%2038.5088C21.8264%2029.5292%2026.4621%2021.6229%2033.4905%2017.0137L39.4891%2025.1785'%20stroke='%2305C2DF'/%3e%3cpath%20d='M26.8278%209.0155C17.3897%2015.2684%2011.1646%2025.9939%2011.1646%2038.1756C11.1646%2050.3573%2017.3897%2061.0828%2026.8278%2067.3357'%20stroke='%2305C2DF'/%3e%3cpath%20d='M26.8274%209.18211L20.8287%200.684021C8.57933%208.75917%200.499979%2022.6105%200.499979%2038.3422C0.499979%2054.074%208.57933%2067.9253%2020.8287%2076.0004L26.994%2067.3357'%20stroke='%2305C2DF'/%3e%3c/svg%3e"
+                alt="Wireless sensors image"
+              />
+              <h3 class="why-kat__section-title">Wireless sensors</h3>
+              <p class="why-kat__desc">
+                What makes it even more advanced, KAT Loco is entirely wireless,
+                and comes with a complete system of algorithms, super durable
+                batteries and more!
+              </p>
+            </div>
+          </div>
+          <div class="why-kat__buy-button">
+            <a
+              class="buy-button"
+              href="#buy"
+            >
+              Buy Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="contact-us"
+        id="contact-us"
+      >
+        <div class="contact-us__container">
+          <div class="contact-us__title-wrapper">
+            <p class="contact-us__title-intro">Have any questions?</p>
+            <h2 class="contact-us__title">
+              Get in
+              <span class="contact-us__title--highlighted">touch</span>
+            </h2>
+          </div>
+          <form
+            class="form contact-us__form"
+            onsubmit="
+              this.reset();
+              return false;
+            "
+            novalidate
+          >
+            <div class="form__field">
+              <input
+                class="form__input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder=" "
+              />
+              <label
+                class="form__label"
+                for="name"
+              >
+                Name*
+              </label>
+              <span class="form__line"></span>
+            </div>
+            <div class="form__field">
+              <input
+                class="form__input"
+                type="email"
+                name="contacts-email"
+                id="contacts-email"
+                placeholder=" "
+              />
+              <label
+                class="form__label"
+                for="contacts-email"
+              >
+                Email*
+              </label>
+              <span class="form__line"></span>
+            </div>
+            <div class="form__field">
+              <input
+                class="form__input"
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder=" "
+              />
+              <label
+                class="form__label"
+                for="tel"
+              >
+                Phone*
+              </label>
+              <span class="form__line"></span>
+            </div>
+            <div class="form__field">
+              <textarea
+                class="form__textarea"
+                name="message"
+                id="message"
+                placeholder=" "
+              ></textarea>
+              <label
+                class="form__label"
+                for="message"
+              >
+                Message
+              </label>
+              <span class="form__line"></span>
+            </div>
+            <button
+              class="form__submit form__submit--tablet--max-width--200"
+              type="submit"
+            >
+              Contact Us
+            </button>
+          </form>
+          <p class="contact-us__text">
+            Our manager will reply you within 15 minutes
+          </p>
+          <div class="contacts contact-us__contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a
+                  href="tel:+86-0571-86105373"
+                  class="contacts__link"
+                >
+                  +86-0571-86105373
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a
+                  href="mailto:global@katvr.com"
+                  class="contacts__link"
+                >
+                  global@katvr.com
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a
+                  href="mailto:overseas@katvr.com"
+                  class="contacts__link"
+                >
+                  overseas@katvr.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a
+            class="contact-us__link-up"
+            href="#header"
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a
+        class="footer__logo-link"
+        href="#header"
+      >
+        <img
+          class="footer__logo"
+          src="data:image/png;base64,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"
+          alt="logo image"
+        />
+      </a>
+
+      <nav class="navigation footer__navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a
+              href="#about"
+              class="navigation__link"
+            >
+              About
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#tech"
+              class="navigation__link"
+            >
+              Tech
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#why-kat"
+              class="navigation__link"
+            >
+              Benefits
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a
+              href="#contact-us"
+              class="navigation__link"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <div class="contacts contacts--hidden-on-wide">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a
+                href="tel:+86-0571-86105373"
+                class="contacts__link"
+              >
+                +86-0571-86105373
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a
+                href="mailto:global@katvr.com"
+                class="contacts__link"
+              >
+                global@katvr.com
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a
+                href="mailto:overseas@katvr.com"
+                class="contacts__link"
+              >
+                overseas@katvr.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a
+                href="https://www.facebook.com/KATVR.Technology/"
+                class="social__link"
+                target="_blank"
+              >
+                <svg
+                  class="social__icon"
+                  viewBox="0 0 8 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1.88535 8.64952V15.1456H4.71337V8.64952H7.10148L7.57282 5.41941H4.71337V3.23011H7.57282V0H4.71337C3.15391 0 1.88535 1.44892 1.88535 3.23011V5.41941H0V8.64952H1.88535Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a
+                href="https://x.com/katvrwalk"
+                class="social__link"
+              >
+                <svg
+                  class="social__icon"
+                  viewBox="0 0 19 14"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M7.06292 13.8835C6.24424 13.8835 5.40158 13.8241 4.55387 13.705C3.0608 13.4951 1.5494 12.7953 1.12171 12.5858L0 12.0363L1.21444 11.6784C2.54198 11.2873 3.34954 11.0447 4.3492 10.6647C3.34824 10.2304 2.57679 9.44905 2.20544 8.43906L1.92291 7.67057L2.15459 7.70227C1.9349 7.50387 1.76143 7.3025 1.62696 7.11937C1.14872 6.46851 0.895521 5.67323 0.949397 4.9917L1.00255 4.32092L1.45074 4.47648C1.26167 4.15656 1.12503 3.81489 1.04473 3.45678C0.849012 2.58346 1.01281 1.65565 1.50606 0.844316L1.89648 0.202135L2.41863 0.764076C4.07 2.54153 6.16162 3.59591 8.64409 3.90458C8.54269 3.27831 8.61867 2.67392 8.87014 2.13217C9.16291 1.50138 9.68376 0.966488 10.3759 0.585217C11.1446 0.161885 12.0768 -0.0432454 13.0008 0.00761663C13.9811 0.0615847 14.8711 0.390699 15.578 0.960017C15.9232 0.879648 16.1776 0.793842 16.5214 0.677882C16.7282 0.608125 16.9628 0.52892 17.2563 0.438326L18.3378 0.104423L17.6325 1.90931C17.679 1.90582 17.727 1.90284 17.7771 1.9009L18.932 1.85405L18.2494 2.68997C18.2103 2.73786 18.2003 2.75145 18.1864 2.77021C18.1314 2.8445 18.063 2.93691 17.126 4.05794C16.8914 4.33865 16.7743 4.70426 16.7961 5.0876C16.8791 6.54435 16.6797 7.86237 16.2029 9.00488C15.7519 10.0858 15.0531 11.0132 14.1261 11.7614C12.979 12.687 11.5163 13.3208 9.77837 13.6448C8.92589 13.8038 8.01044 13.8835 7.06292 13.8835Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a
+                href="https://www.youtube.com/c/KATVR"
+                class="social__link"
+                target="_blank"
+              >
+                <svg
+                  class="social__icon"
+                  viewBox="0 0 18 14"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M15.2739 0H2.62139C1.17607 0 0 1.17607 0 2.62139V11.0098C0 12.4551 1.17607 13.6312 2.62139 13.6312H15.2739C16.7193 13.6312 17.8953 12.4551 17.8953 11.0098V2.62139C17.8953 1.17607 16.7193 0 15.2739 0ZM6.32628 10.4303V3.30336L12.6349 6.80796L6.32628 10.4303Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M7.37378 5.08524V8.61906L10.5021 6.82341L7.37378 5.08524Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a
+                href="https://www.reddit.com/r/KATVR/"
+                class="social__link"
+                target="_blank"
+              >
+                <svg
+                  class="social__icon"
+                  viewBox="0 0 18 18"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1.11273 10.7859C1.06716 11.0516 1.03535 11.3206 1.03535 11.5959C1.03535 14.9451 4.58761 17.6699 8.86946 17.6699C13.1513 17.6699 16.6346 14.9451 16.6346 11.5959C16.6346 11.3206 16.6027 11.0516 16.5572 10.7859C17.2285 10.4126 17.6699 9.67531 17.6699 8.83495C17.6699 7.61684 16.7412 6.62621 15.5992 6.62621C15.0774 6.62621 14.5871 6.83486 14.2111 7.19867C12.9099 6.23106 11.1835 5.6156 9.2747 5.53795L10.2653 1.43927L12.4992 2.27302C12.532 3.46093 13.4425 4.41748 14.5639 4.41748C15.7058 4.41748 16.6346 3.42685 16.6346 2.20874C16.6346 0.990625 15.7058 0 14.5639 0C13.7677 0 13.0831 0.4869 12.7368 1.19137L9.54432 0.000575192L8.20269 5.5483C6.39731 5.66909 4.70058 6.2752 3.45884 7.19867C3.08285 6.83486 2.59254 6.62621 2.07069 6.62621C0.928711 6.62621 0 7.61684 0 8.83495C0 9.67531 0.44137 10.4126 1.11273 10.7859ZM11.9755 8.83495C12.8318 8.83495 13.5285 9.5781 13.5285 10.4915C13.5285 11.4049 12.8318 12.1481 11.9755 12.1481C11.1192 12.1481 10.4225 11.4049 10.4225 10.4915C10.4225 9.5781 11.1192 8.83495 11.9755 8.83495ZM11.7541 13.713L12.1969 14.7105C11.2253 15.2018 10.0747 15.4612 8.86946 15.4612C7.66426 15.4612 6.44462 15.2018 5.47304 14.7105L5.91576 13.7129C7.58418 14.5552 10.0857 14.5552 11.7541 13.713ZM5.6944 8.83495C6.55072 8.83495 7.24742 9.5781 7.24742 10.4915C7.24742 11.4049 6.55072 12.1481 5.6944 12.1481C4.83809 12.1481 4.14138 11.4049 4.14138 10.4915C4.14138 9.5781 4.83809 8.83495 5.6944 8.83495Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <dialog class="video-modal">
+      <div class="video-modal__content">
+        <button class="video-modal__close"></button>
+
+        <div class="video-modal__video-container">
+          <iframe
+            class="video-modal__video"
+            title="YouTube video player"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
