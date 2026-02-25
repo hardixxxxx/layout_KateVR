@@ -253,14 +253,16 @@
     background-color: $color-blue;
   }
 
-  @each $selector in $selectors {
-    &__#{$selector}:has(&__input:not(:placeholder-shown)) &__label {
-      top: $form-label-offset;
-    }
-
-    &__#{$selector}:focus-within &__label {
+  .form__input,
+  .form__textarea {
+    &:focus ~ .form__label,
+    &:not(:placeholder-shown) ~ .form__label {
       top: $form-label-offset;
       color: $color-blue;
+    }
+
+    &:focus ~ .form__line {
+      background-color: $color-blue;
     }
   }
 }
